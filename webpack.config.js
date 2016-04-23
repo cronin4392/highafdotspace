@@ -1,3 +1,6 @@
+var webpack = require('webpack');
+var path = require('path');
+
 module.exports = {
   entry: [
     './src/index.js'
@@ -19,5 +22,10 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     contentBase: './'
-  }
+  },
+  plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ]
 };
