@@ -5,7 +5,7 @@ var combinemq = require('combine-mq');
 var debug = false;
 
 var input_file = "./src/style/style.scss";
-var output_file = './style/style.css';
+var output_file = './public/style/style.css';
 
 if (process.env.NODE_ENV !== "production"){
 	debug = true;

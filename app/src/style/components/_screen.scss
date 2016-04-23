@@ -1,0 +1,11 @@
+.scroller {
+	@include abs();
+	z-index: 2;
+	overflow: auto;
+}
+
+.screen {
+	display: block;
+	height: 100vh;
+	position: relative;
+}
