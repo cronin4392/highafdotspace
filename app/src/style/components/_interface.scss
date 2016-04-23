@@ -2,6 +2,8 @@
 	@include abs();
 	z-index: 1;
 
+	pointer-events: none;
+
 	padding: 1em;
 }
 

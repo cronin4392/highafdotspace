@@ -1,16 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
+import $ from 'jquery';
+import IFrame from 'react-iframe';
 
-const Stream = ({stream}) => {
-	// if(!stream) {
-	// 	return <div>Loading...</div>;
-	// }
+class Stream extends Component {
+	constructor(props) {
+		super(props);
+	}
 
-	// const steamId = video.id.videoId;
+	componentDidMount() {
+		var iframe = $('iframe')[0];
 
-	return (
-		<div className="stream">
-		</div>
-	);
+		iframe.addEventListener('load', function(e) {
+			var frame = e.target;
+			window.addEventListener("message", function(event) {
+				if(event['data'] == 'loaded') {
+					frame.contentWindow.postMessage({testing: true}, '*');
+				}
+			}, false);
+		});
+	}
+
+	render() {
+		return (
+			<div className="stream">
+				<IFrame url="http://highafdotspace3d.herokuapp.com/" />
+			</div>
+		);
+	}
 }
 
 export default Stream;

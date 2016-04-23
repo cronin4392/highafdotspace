@@ -163,6 +163,13 @@ button {
   bottom: 0;
   left: 0;
   z-index: 0; }
+  /* line 5, /Users/stephencronin/Sites/highafdotspace/app/src/style/components/_stream.scss */
+  .stream iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
 
 /* line 1, /Users/stephencronin/Sites/highafdotspace/app/src/style/components/_interface.scss */
 .interface {
@@ -172,8 +179,43 @@ button {
   bottom: 0;
   left: 0;
   z-index: 1;
+  pointer-events: none;
   padding: 1em; }
 
-/* line 9, /Users/stephencronin/Sites/highafdotspace/app/src/style/components/_interface.scss */
+/* line 11, /Users/stephencronin/Sites/highafdotspace/app/src/style/components/_interface.scss */
 .interface--countdown .unit {
   display: block; }
+
+/* line 1, /Users/stephencronin/Sites/highafdotspace/app/src/style/components/_scrubber.scss */
+.scrubber {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: auto;
+  padding: 2em 1em 1em 1em;
+  overflow: auto;
+  white-space: nowrap;
+  background: gray; }
+  /* line 15, /Users/stephencronin/Sites/highafdotspace/app/src/style/components/_scrubber.scss */
+  .scrubber:after {
+    content: '';
+    display: inline-block;
+    margin-left: 50vw; }
+
+/* line 22, /Users/stephencronin/Sites/highafdotspace/app/src/style/components/_scrubber.scss */
+.scrubber--event {
+  display: inline-block;
+  margin-left: calc(50vw - 2em);
+  position: relative;
+  height: 0.5em;
+  width: 0.5em;
+  background: #000000; }
+
+/* line 33, /Users/stephencronin/Sites/highafdotspace/app/src/style/components/_scrubber.scss */
+.scrubber--event--time {
+  position: absolute;
+  left: 50%;
+  bottom: 1em;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }

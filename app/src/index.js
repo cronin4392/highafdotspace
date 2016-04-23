@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import ReactUpdate from 'react-addons-update';
 import Moment from 'moment';
+import _ from 'lodash';
 
 import Intro from './components/intro';
 import Stream from './components/stream';
@@ -20,7 +21,8 @@ class App extends Component {
 				current: Moment(),
 				count: 0,
 				launch: 0
-			}
+			},
+			events: {}
 		}
 	}
 
@@ -57,6 +59,11 @@ class App extends Component {
 				}
 			})
 		);
+
+		var feed = _.sortBy(data['feed'], 'timestamp');
+		this.setState({
+			'events': feed
+		});
 	}
 
 	onTimeChange() {
