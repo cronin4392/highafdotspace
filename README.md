@@ -1,13 +1,25 @@
-![SnapLaunch](logo.png)
+# ReduxSimpleStarter
 
-# HIGHAFDOTSPACE
+Interested in learning [Redux](https://www.udemy.com/react-redux/)?
 
-## Installation 
+###Getting Started###
 
-### App
+There are two methods for getting started with this repo.
 
-> npm install
+####Familiar with Git?#####
+Checkout this repo, install depdencies, then start the gulp process with the following:
 
-> npm start
+```
+	> git clone git@github.com:StephenGrider/ReduxSimpleStarter.git
+	> cd ReduxSimpleStarter
+	> npm install
+	> npm start
+```
 
-[http://highaf.space](highaf.space)
+####Not Familiar with Git?#####
+Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+
+```
+	> npm install
+	> npm start
+```
