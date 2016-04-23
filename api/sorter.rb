@@ -4,7 +4,7 @@ data = File.read("data.json")
 
 data = JSON.parse(data)
 
-sorted = data["feed"].sort_by { |h| h["timestamp"] }
+sorted = data["feed"].sort_by { |h| h["milestone"]? }.sort_by { |h| h["timestamp"] }
 
 data["feed"] = sorted
 
