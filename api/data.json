@@ -15,9 +15,21 @@
 	"notes": "NROL-45 will be the 31st Delta IV mission since the vehicle’s inaugural launch in 2002, and the 9th NRO mission to launch on Delta IV.",
 	"feed": [
 		{
-			"timestamp": 1455104340,
-			"stream": {},
-			"conditions": {}
+			"timestamp": 1234,
+			"milestone": true,
+			"stream": {
+				"type": "3d",
+				"path": "/somepath"
+			},
+			"conditions": {
+				"temp": 71
+			}
+		},
+		{
+			"timestamp": 2123,
+			"conditions": {
+				"temp": 75
+			}
 		}
 	]
 }
