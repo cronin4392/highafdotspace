@@ -1,14 +1,37 @@
-@import 'components/stream';
-@import 'components/interface';
+@import 'utils/reset';
+@import 'utils/utils';
+@import 'utils/mixins';
+@import 'utils/fonts';
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
 
 html {
 
 }
 
 body {
+	font-size: 20px;
+	line-height: 1.2;
+	font-family: Decima, monospace;
+	text-transform: uppercase;
 
+	background-color: #000000;
+	color: #FFFFFF;
 }
 
 .container {
 
 }
+
+button {
+	@include reset();
+}
+
+@import 'components/screen';
+@import 'components/intro';
+@import 'components/stream';
+@import 'components/interface';

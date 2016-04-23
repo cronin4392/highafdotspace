@@ -1,0 +1,26 @@
+var data = {
+	"launch_name": "",
+	"rocket": "",
+	"launch_time": 1461441398,
+	"feed": [
+		{
+			"timestamp": 1234,
+			"milestone": true,
+			"stream": {
+				"type": "3d",
+				"path": "/somepath"
+			},
+			"conditions": {
+				"temp": 71
+			}
+		},
+		{
+			"timestamp": 2123,
+			"conditions": {
+				"temp": 75
+			}
+		}
+	]
+}
+
+export default data;
