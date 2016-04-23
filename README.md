@@ -1,3 +1,5 @@
+![SnapLaunch](logo.png)
+
 # HIGHAFDOTSPACE
 
 ## Installation 
