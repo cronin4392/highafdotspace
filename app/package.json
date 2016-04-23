@@ -5,15 +5,10 @@
   "main": "index.js",
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
-<<<<<<< HEAD
     "start": "npm run build:css && npm run watch:css & node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "build:css": "node ./scripts/build_css.js",
     "watch:css": "chokidar-cmd -c 'npm run build:css' -t ./src/style",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js 'test/**/*.js'",
-=======
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
->>>>>>> 2eba18e307acb9039da1973681a0d44bce6b9aee
     "test:watch": "npm run test -- --watch"
   },
   "author": "",
