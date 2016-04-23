@@ -5,7 +5,8 @@
   "main": "index.js",
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
-    "start": "npm run build:css && npm run watch:css & node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start": "npm run build:css && npm run watch:css & node server.js",
+    "postinstall": "webpack -p --config webpack.prod.config.js",
     "build:css": "node ./scripts/build_css.js",
     "watch:css": "chokidar-cmd -c 'npm run build:css' -t ./src/style",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js 'test/**/*.js'",
