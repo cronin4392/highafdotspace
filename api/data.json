@@ -1,7 +1,7 @@
 {
   "mission": {
     "name": "Delta IV - NROL-45",
-    "mission": "The mission will be launched for the National Reconnaissance Office in support of national defense.",
+    "description": "The mission will be launched for the National Reconnaissance Office in support of national defense.",
     "agency_name": "United Launch Alliance",
     "agency_abbreviation": "ULA"
   },
@@ -14,8 +14,8 @@
   "launch_site": "VANDENBERG AIR FORCE BASE, CA",
   "notes": "NROL-45 will be the 31st Delta IV mission since the vehicle’s inaugural launch in 2002, and the 9th NRO mission to launch on Delta IV.",
   "feed_count": 327,
-  "visible_milestone_count": 10,
-  "invisible_milestone_count": 16,
+  "visible_milestone_count": 11,
+  "invisible_milestone_count": 15,
   "not_milestone_count": 301,
   "feed": [
     {
@@ -124,7 +124,7 @@
       }
     },
     {
-      "timestamp": 1455104795,
+      "timestamp": 1455104323,
       "milestone": true,
       "milestone_source": "launch_replay_video",
       "visible": true,
@@ -139,7 +139,7 @@
       }
     },
     {
-      "timestamp": 1455105275,
+      "timestamp": 1455104331,
       "milestone": true,
       "milestone_source": "launch_replay_video",
       "visible": true,
@@ -154,15 +154,30 @@
       }
     },
     {
-      "timestamp": 1455105755,
+      "timestamp": 1455104339,
       "milestone": true,
       "milestone_source": "launch_replay_video",
       "visible": true,
-      "name": "1 seconds",
+      "name": "1 second",
       "description": "3rd Camera Angle Change",
       "stream": {
         "type": "3d",
         "camera": "Final-3"
+      },
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104340,
+      "milestone": true,
+      "milestone_source": "nasa_countdown_101",
+      "visible": true,      
+      "name": "T-0",
+      "description": "Solid rocket booster ignition and liftoff",
+      "stream": {
+        "type": "3d",
+        "camera": "M-12"
       },
       "conditions": {
         "temp": 71
@@ -357,21 +372,6 @@
         "type": "3d",
         "camera": "M-11"
       },
-      "conditions": {
-        "temp": 71
-      }
-    },
-    {
-      "timestamp": 1455104340,
-      "milestone": true,
-      "milestone_source": "nasa_countdown_101",
-      "name": "T-0",
-      "description": "Solid rocket booster ignition and liftoff",
-      "stream": {
-        "type": "3d",
-        "camera": "M-12"
-      },
-      "visible": false,
       "conditions": {
         "temp": 71
       }
