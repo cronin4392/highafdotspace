@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Moment from 'moment';
+import _ from 'lodash';
 
 // import TweenLite from '../modules/Greensock/TweenLite.min.js';
 // import Draggable from '../modules/Greensock/utils/Draggable.min.js';
@@ -9,6 +10,8 @@ import Moment from 'moment';
 class Scrubber extends Component {
 	constructor(props) {
 		super(props);
+
+		this.scrollAnimating = false;
 	}
 
 	componentDidMount() {
@@ -35,6 +38,8 @@ class Scrubber extends Component {
 				// }
 			}
 		)
+
+		this.detectScrollPagination();
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -63,11 +68,11 @@ class Scrubber extends Component {
 				var stream = eventItem['stream'] || {};
 				var camera = stream['camera'] || null;
 
-				// console.log( event['timestamp'],  );
 				return (
 					<button
 						className="scrubber--event"
 						data-event-name={eventItem['name']}
+						data-event-index={index}
 						data-event-camera={camera}
 						key={index}
 						ref={'scrubberEvent['+index+']'}
@@ -91,6 +96,7 @@ class Scrubber extends Component {
 	}
 
 	gotoEvent(index, force = false) {
+	console.log(index)
 		var $scrubber = this.refs.scrubber;
 		var atPresent = $scrubber.scrollLeft + $scrubber.clientWidth == this.scrollerWidth;
 
@@ -99,8 +105,44 @@ class Scrubber extends Component {
 			var $scrubberEvent = this.refs['scrubberEvent['+index+']'];
 			var scrollTo = $scrubberEvent.offsetLeft + ($scrubberEvent.clientWidth / 2) - ($scrubber.clientWidth / 2);
 			// $scrubber.scrollLeft = scrollTo;
-			TweenLite.to($scrubber, 1, {scrollTo:{x: scrollTo}, ease:Power2.easeOut});
+			TweenLite.to($scrubber, 1, {
+				scrollTo:{x: scrollTo},
+				ease:Power2.easeOut,
+				onStart: () => {
+					this.scrollAnimating = true;
+				},
+				onComplete: () => {
+					this.scrollAnimating = false;
+				}
+			});
 			this.props.onEventSelect(eventItem['stream']['camera']);
+		}
+	}
+
+	detectScrollPagination() {
+		const scrollPagination = _.debounce((target) => { this.scrollPagination(target) }, 300);
+
+		var $scrubber = this.refs.scrubber;
+		$scrubber.addEventListener('scroll', (e) => {
+			scrollPagination(e.target);
+		});
+	}
+
+	scrollPagination($scrubber) {
+		console.log(this.scrollAnimating);
+		
+		if(!this.scrollAnimating) {
+			var middle = [
+				$scrubber.getBoundingClientRect().left + ($scrubber.clientWidth / 2),
+				$scrubber.getBoundingClientRect().top + ($scrubber.clientHeight / 2)
+			];
+			var el = document.elementFromPoint(middle[0], middle[1]);
+			console.log("ALMOST");
+			if(el.classList.contains('scrubber--event')) {
+				console.log("YEP");
+				var id = el.getAttribute('data-event-index');
+				this.gotoEvent(id, true);
+			}
 		}
 	}
 }
