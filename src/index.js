@@ -23,15 +23,17 @@ class App extends Component {
 				count: 0,
 				launch: 0
 			},
-			events: {}
+			events: {},
+			activeEvents: {},
 		}
 	}
 
 	componentDidMount() {
+		var interval = 100;
 		this.loadData();
 		setInterval(function() {
 			this.onTimeChange();
-		}.bind(this), 1000);
+		}.bind(this), interval);
 	}
 
 	render() {
@@ -56,7 +58,6 @@ class App extends Component {
 	}
 
 	onEventSelect(event) {
-		console.log('detect in index', event);
 		$(window).trigger('eventSelect', event);
 	}
 
@@ -78,18 +79,30 @@ class App extends Component {
 
 	onTimeChange() {
 		// fake getting "current time". just add 1 to state['time']['current'] since not actually now
+		var interval = 1000;
 		var lastCurrentTime = this.state['time']['current'].valueOf();
-		var newCurrentTime = Moment(lastCurrentTime + 1000);
+		var newCurrentTime = Moment(lastCurrentTime + interval);
 		var launchTime = this.state['time']['launch'];
+
+		var diff = launchTime.diff(newCurrentTime);
 
 		this.setState(
 			ReactUpdate(this.state, {
 				time: {
 					current: {$set: newCurrentTime},
-					count: {$set: Moment(this.state['time']['launch'].diff(this.state['time']['current']))}
+					count: {$set: diff}
 				}
 			})
 		);
+
+		var activeEvents = _.filter(this.state['events'], function(event) {
+			var greaterThan = (event['timestamp'] <= (newCurrentTime.valueOf() / 1000));
+			return greaterThan;
+		});
+
+		this.setState({
+			'activeEvents': activeEvents
+		})
 	}
 }
 
