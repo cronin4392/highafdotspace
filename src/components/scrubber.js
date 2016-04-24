@@ -8,6 +8,7 @@ class Scrubber extends Component {
 		super(props);
 
 		this.scrollAnimating = false;
+		this.activeEvent = null;
 	}
 
 	componentDidMount() {
@@ -84,14 +85,26 @@ class Scrubber extends Component {
 			});
 		}
 
+		let description = '';
+
+		if(events[this.activeEvent]) {
+			description = events[this.activeEvent]['description'];
+		}
+
 		return (
-			<div className="scrubber" ref="scrubber">
-				{eventItems}
+			<div>
+				<p className={"event--description " + (description && description.length > 0 ? 'active' : 'inactive')}>
+					{description}
+				</p>
+				<div className="scrubber" ref="scrubber">
+					{eventItems}
+				</div>
 			</div>
 		);
 	}
 
 	gotoEvent(index, force = false) {
+		this.activeEvent = index;
 		var $scrubber = this.refs.scrubber;
 		var atPresent = $scrubber.scrollLeft + $scrubber.clientWidth == this.scrollerWidth;
 
