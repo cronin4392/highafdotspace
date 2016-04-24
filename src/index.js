@@ -34,7 +34,7 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		var interval = 200;
+		var interval = 1000;
 		this.loadData();
 		setInterval(function() {
 			this.onTimeChange();

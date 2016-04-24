@@ -11,13 +11,28 @@ var data = {
     "payload": ""
   },
   "launch_time": 1455104340,
-  "launch_site": "Space Launch Complex (SLC)-6 at Vandenberg Air Force Base, California",
+  "launch_site": "VANDENBERG AIR FORCE BASE, CA",
   "notes": "NROL-45 will be the 31st Delta IV mission since the vehicle’s inaugural launch in 2002, and the 9th NRO mission to launch on Delta IV.",
-  "feed_count": 324,
-  "visible_milestone_count": 6,
-  "invisible_milestone_count": 17,
+  "feed_count": 327,
+  "visible_milestone_count": 10,
+  "invisible_milestone_count": 16,
   "not_milestone_count": 301,
   "feed": [
+    {
+      "timestamp": 1455103860,
+      "milestone": true,
+      "milestone_source": "nasa_countdown_101",
+      "visible": true,
+      "name": "T-8 minutes",
+      "description": "Arm launch pad ordnance.",
+      "stream": {
+        "type": "3d",
+        "camera": "M-0"
+      },
+      "conditions": {
+        "temp": 71
+      }
+    },
     {
       "timestamp": 1455104040,
       "milestone": true,
@@ -109,27 +124,57 @@ var data = {
       }
     },
     {
+      "timestamp": 1455104795,
+      "milestone": true,
+      "milestone_source": "launch_replay_video",
+      "visible": true,
+      "name": "17 seconds",
+      "description": "1st Camera Angle Change",
+      "stream": {
+        "type": "3d",
+        "camera": "Final-1"
+      },
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455105275,
+      "milestone": true,
+      "milestone_source": "launch_replay_video",
+      "visible": true,
+      "name": "9 seconds",
+      "description": "2nd Camera Angle Change",
+      "stream": {
+        "type": "3d",
+        "camera": "Final-2"
+      },
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455105755,
+      "milestone": true,
+      "milestone_source": "launch_replay_video",
+      "visible": true,
+      "name": "1 seconds",
+      "description": "3rd Camera Angle Change",
+      "stream": {
+        "type": "3d",
+        "camera": "Final-3"
+      },
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
       "timestamp": 1455103800,
       "milestone": true,
       "milestone_source": "nasa_countdown_101",
       "visible": false,
       "name": "T-9 minutes and counting",
       "description": "Start automatic ground launch sequencer.",
-      "conditions": {
-        "temp": 71
-      }
-    },
-    {
-      "timestamp": 1455103890,
-      "milestone": true,
-      "milestone_source": "nasa_countdown_101",
-      "visible": true,
-      "name": "T-7 minutes, 30 seconds",
-      "description": "Retracting orbiter access arm.",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
