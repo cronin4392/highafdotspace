@@ -17,9 +17,8 @@ class App extends Component {
 
 		this.state = {
 			time: {
-				// current: Moment(1455104040000), // 1 el
-				// current: Moment(1455104270000), // 2 el
-				current: Moment(1455104286000),
+				// current: Moment(1455104286000), // T-1
+				current: Moment(1455103860000), // T-8
 				count: 0,
 				launch: 0
 			},
