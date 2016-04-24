@@ -236,13 +236,20 @@ button {
 .view-toggle {
   position: absolute;
   right: 1em;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  background-color: #FC5C5C;
+  top: 1em;
   padding: 1em;
-  pointer-events: auto;
-  display: none; }
+  margin: -1em;
+  pointer-events: auto; }
+  /* line 20, /Users/stephencronin/Sites/highafdotspace/src/style/components/_interface.scss */
+  .view-toggle .icon {
+    background: url("../images/eye_open.png") no-repeat center center transparent;
+    background-size: 100% 100%;
+    display: block;
+    width: 1.75em;
+    height: 1.75em; }
+  /* line 28, /Users/stephencronin/Sites/highafdotspace/src/style/components/_interface.scss */
+  .view-toggle.inactive .icon {
+    background-image: url("../images/eye_close.png"); }
 
 /* line 1, /Users/stephencronin/Sites/highafdotspace/src/style/components/_scrubber.scss */
 .scrubber {

@@ -10,13 +10,22 @@
 	.view-toggle {
 		position: absolute;
 		right: 1em;
-		top: 50%;
-		transform: translateY(-50%);
+		top: 1em;
 
-		background-color: $red;
 		padding: 1em;
+		margin: -1em;
 
 		pointer-events: auto;
 
-		display: none;
+		.icon {
+			background: url('../images/eye_open.png') no-repeat center center transparent;
+			background-size: 100% 100%;
+
+			display: block;
+			width: 1.75em;
+			height: 1.75em;
+		}
+		&.inactive .icon {
+			background-image: url('../images/eye_close.png');
+		}
 	}

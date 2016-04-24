@@ -96,7 +96,6 @@ class Scrubber extends Component {
 	}
 
 	gotoEvent(index, force = false) {
-	console.log(index)
 		var $scrubber = this.refs.scrubber;
 		var atPresent = $scrubber.scrollLeft + $scrubber.clientWidth == this.scrollerWidth;
 
@@ -129,17 +128,15 @@ class Scrubber extends Component {
 	}
 
 	scrollPagination($scrubber) {
-		console.log(this.scrollAnimating);
-		
+		// console.log(this.scrollAnimating);
+
 		if(!this.scrollAnimating) {
 			var middle = [
 				$scrubber.getBoundingClientRect().left + ($scrubber.clientWidth / 2),
 				$scrubber.getBoundingClientRect().top + ($scrubber.clientHeight / 2)
 			];
 			var el = document.elementFromPoint(middle[0], middle[1]);
-			console.log("ALMOST");
 			if(el.classList.contains('scrubber--event')) {
-				console.log("YEP");
 				var id = el.getAttribute('data-event-index');
 				this.gotoEvent(id, true);
 			}
