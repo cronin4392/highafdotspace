@@ -14,8 +14,8 @@
   "launch_site": "Space Launch Complex (SLC)-6 at Vandenberg Air Force Base, California",
   "notes": "NROL-45 will be the 31st Delta IV mission since the vehicle’s inaugural launch in 2002, and the 9th NRO mission to launch on Delta IV.",
   "feed_count": 324,
-  "visible_milestone_count": 9,
-  "invisible_milestone_count": 14,
+  "visible_milestone_count": 6,
+  "invisible_milestone_count": 17,
   "not_milestone_count": 301,
   "feed": [
     {
@@ -34,21 +34,6 @@
       }
     },
     {
-      "timestamp": 1455104105,
-      "milestone": true,
-      "milestone_source": "nasa_countdown_101",
-      "visible": true,
-      "name": "T-3 minutes, 55 seconds",
-      "description": "Starting orbiter aerosurface profile test.",
-      "stream": {
-        "type": "3d",
-        "camera": "M-2"
-      },
-      "conditions": {
-        "temp": 71
-      }
-    },
-    {
       "timestamp": 1455104140,
       "milestone": true,
       "milestone_source": "launch_replay_video",
@@ -58,21 +43,6 @@
       "stream": {
         "type": "3d",
         "camera": "M-3"
-      },
-      "conditions": {
-        "temp": 71
-      }
-    },
-    {
-      "timestamp": 1455104160,
-      "milestone": true,
-      "milestone_source": "launch_replay_video",
-      "visible": true,
-      "name": "T-3 minutes",
-      "description": "Booster liquid oxygen and liquid hydrogen propellant tanks verified.",
-      "stream": {
-        "type": "3d",
-        "camera": "M-4"
       },
       "conditions": {
         "temp": 71
@@ -114,25 +84,10 @@
       "milestone_source": "nasa_countdown_101",
       "visible": true,
       "name": "T-50 seconds",
-      "description": "Orbiter transferring from ground to internal power",
+      "description": "Launch enabled 'on'. Main power turned 'off'",
       "stream": {
         "type": "3d",
         "camera": "M-7"
-      },
-      "conditions": {
-        "temp": 71
-      }
-    },
-    {
-      "timestamp": 1455104309,
-      "milestone": true,
-      "milestone_source": "nasa_countdown_101",
-      "visible": true,
-      "name": "T-31 seconds",
-      "description": "Ground launch sequencer is go for auto sequence start",
-      "stream": {
-        "type": "3d",
-        "camera": "M-8"
       },
       "conditions": {
         "temp": 71
@@ -144,7 +99,7 @@
       "milestone_source": "launch_replay_video",
       "visible": true,
       "name": "T-25 seconds",
-      "description": "Launch vehicle and spacecraft status check complete.",
+      "description": "Solid Rocket Motor Thrust Vector Control System Blowdown.",
       "stream": {
         "type": "3d",
         "camera": "M-9"
@@ -206,12 +161,42 @@
       }
     },
     {
+      "timestamp": 1455104105,
+      "milestone": true,
+      "milestone_source": "nasa_countdown_101",
+      "visible": false,
+      "name": "T-3 minutes, 55 seconds",
+      "description": "Starting orbiter aerosurface profile test.",
+      "stream": {
+        "type": "3d",
+        "camera": "M-2"
+      },
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
       "timestamp": 1455104128,
       "milestone": true,
       "milestone_source": "launch_replay_video",
       "visible": false,
       "name": "T-3 minutes, 32 seconds",
       "description": "Transfer from ground facility power to internal battery power complete.",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104160,
+      "milestone": true,
+      "milestone_source": "launch_replay_video",
+      "visible": false,
+      "name": "T-3 minutes",
+      "description": "Booster liquid oxygen and liquid hydrogen propellant tanks verified.",
+      "stream": {
+        "type": "3d",
+        "camera": "M-4"
+      },
       "conditions": {
         "temp": 71
       }
@@ -261,6 +246,21 @@
       }
     },
     {
+      "timestamp": 1455104309,
+      "milestone": true,
+      "milestone_source": "nasa_countdown_101",
+      "visible": false,
+      "name": "T-31 seconds",
+      "description": "Ground launch sequencer is go for auto sequence start",
+      "stream": {
+        "type": "3d",
+        "camera": "M-8"
+      },
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
       "timestamp": 1455104324,
       "milestone": true,
       "milestone_source": "nasa_countdown_101",
@@ -282,7 +282,6 @@
         "type": "3d",
         "camera": "Body"
       },
-      "visible": false,
       "conditions": {
         "temp": 71
       }
