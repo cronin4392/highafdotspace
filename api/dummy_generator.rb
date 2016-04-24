@@ -5,7 +5,9 @@ launch_time = 1455104340
 
 start_time = 1455104340 - (5 * 60)
 
-number_of_seconds = launch_time - start_time
+post_lift_off_seconds = 4868
+
+number_of_seconds = (launch_time - start_time) + 1018
 
 time_object = {
   "timestamp" => start_time,
@@ -30,12 +32,16 @@ number_of_seconds.times do
 		n += rand(200..8000)
 	elsif i < 300
 		n += rand(400..70000)
+	elsif i < 400
+		n -= rand(1000..20000)
+	elsif i < 2000
+		n -= rand(1..3500)
 	end
 
 	dummy_data << {
 	  "timestamp" => dummy_data.last["timestamp"] + 1,
 	  "milestone" => false,
-	  "view_count" => n
+	  "view_count" => n < 0 ? n = 0 : n
 	}
 
 	n += 1
