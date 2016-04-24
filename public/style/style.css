@@ -267,10 +267,11 @@ body.main-active .stream {
   width: calc(50vw + 2em);
   bottom: 33vh;
   border: 2px solid #FC5C5C;
+  background: rgba(0, 0, 0, 0.2);
   color: #FC5C5C;
   line-height: 1;
   padding: 0.75em; }
-  /* line 42, /Users/stephencronin/Sites/highafdotspace/src/style/components/_interface.scss */
+  /* line 43, /Users/stephencronin/Sites/highafdotspace/src/style/components/_interface.scss */
   .event--description.inactive {
     display: none; }
 
