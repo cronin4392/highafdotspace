@@ -10,22 +10,26 @@ class Stream extends Component {
 	componentDidMount() {
 		var iframe = $('iframe')[0];
 
-		iframe.addEventListener('load', function(e) {
-			var frame = e.target;
-			window.addEventListener("message", function(event) {
-				if(event['data'] == 'loaded') {
-					$(window).on('eventSelect', function(event, eventName) {
-						frame.contentWindow.postMessage({eventName: eventName}, '*');
-					});		
-				}
-			}, false);
-		});
+		if(iframe) {
+			iframe.addEventListener('load', (e) => {
+				var frame = e.target;
+				window.addEventListener("message", (event) => {
+					if(event['data'] == 'loaded') {
+						this.props.onStreamLoad(frame);
+					}
+				}, false);
+			});
+		}
 	}
 
 	render() {
 		return (
 			<div className="stream">
-				<IFrame url="http://highafdotspace3d.herokuapp.com/" />
+				{/*
+				<IFrame url="http://highafhdotspace3dalt.herokuapp.com/" />
+				<IFrame url="http://localhost:3000" />
+				*/}
+				<IFrame url="http://highafhdotspace3dalt.herokuapp.com/" />
 			</div>
 		);
 	}
