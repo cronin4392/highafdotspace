@@ -200,15 +200,16 @@ button {
   pointer-events: auto;
   padding: 2em 1em 1em 1em;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
   white-space: nowrap;
   color: #FC5C5C; }
-  /* line 15, /Users/stephencronin/Sites/highafdotspace/src/style/components/_scrubber.scss */
+  /* line 16, /Users/stephencronin/Sites/highafdotspace/src/style/components/_scrubber.scss */
   .scrubber:after {
     content: '';
     display: inline-block;
     margin-left: calc(50vw - 2.25em); }
 
-/* line 22, /Users/stephencronin/Sites/highafdotspace/src/style/components/_scrubber.scss */
+/* line 23, /Users/stephencronin/Sites/highafdotspace/src/style/components/_scrubber.scss */
 .scrubber--event {
   display: inline-block;
   vertical-align: middle;
@@ -216,7 +217,7 @@ button {
   position: relative;
   padding: 1em; }
 
-/* line 30, /Users/stephencronin/Sites/highafdotspace/src/style/components/_scrubber.scss */
+/* line 31, /Users/stephencronin/Sites/highafdotspace/src/style/components/_scrubber.scss */
 .scrubber--event--time {
   position: absolute;
   left: 50%;
@@ -224,7 +225,7 @@ button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%); }
 
-/* line 37, /Users/stephencronin/Sites/highafdotspace/src/style/components/_scrubber.scss */
+/* line 38, /Users/stephencronin/Sites/highafdotspace/src/style/components/_scrubber.scss */
 .scrubber--event--dot {
   display: block;
   height: 0.5em;
