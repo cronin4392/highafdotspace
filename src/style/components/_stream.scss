@@ -9,3 +9,7 @@
 		position: absolute !important;
 	}
 }
+
+body.main-active .stream {
+	pointer-events: auto;
+}

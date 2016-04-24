@@ -138,6 +138,10 @@ button {
   height: 100vh;
   position: relative; }
 
+/* line 13, /Users/stephencronin/Sites/highafdotspace/src/style/components/_screen.scss */
+body.main-active .screen-passover {
+  display: none; }
+
 /* line 1, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
 .intro {
   position: absolute;
@@ -220,6 +224,10 @@ button {
     bottom: 0;
     left: 0;
     position: absolute !important; }
+
+/* line 13, /Users/stephencronin/Sites/highafdotspace/src/style/components/_stream.scss */
+body.main-active .stream {
+  pointer-events: auto; }
 
 /* line 1, /Users/stephencronin/Sites/highafdotspace/src/style/components/_interface.scss */
 .interface {

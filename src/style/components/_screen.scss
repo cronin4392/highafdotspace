@@ -9,3 +9,7 @@
 	height: 100vh;
 	position: relative;
 }
+
+body.main-active .screen-passover {
+	display: none;
+}

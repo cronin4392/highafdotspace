@@ -51,6 +51,16 @@ class App extends Component {
 		// 		}
 		// 	}
 		// )
+
+		window.addEventListener('scroll', (e) => {
+			if(this.refs.main.getBoundingClientRect().top < 10) {
+				// var scrollTo = this.refs.main.offsetTop;
+				// if(scrollTo > 0) {
+				// 	window.scrollTo(0, scrollTo);
+				// }
+				document.body.classList.add('main-active');
+			}
+		});
 	}
 
 	render() {
@@ -67,7 +77,7 @@ class App extends Component {
 							/>
 						</div>
 					</div>
-					<div className="screen screen-fixed" id="app">
+					<div className="screen screen-fixed" id="app" ref="main">
 						<div className="screen--wrapper">
 							<Stream
 								onStreamLoad={ onStreamLoad }
