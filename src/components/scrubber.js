@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Moment from 'moment';
 
+// import TweenLite from '../modules/Greensock/TweenLite.min.js';
+// import Draggable from '../modules/Greensock/utils/Draggable.min.js';
+// import CSSPlugin from '../modules/Greensock/plugins/CSSPlugin.min.js';
+
 class Scrubber extends Component {
 	constructor(props) {
 		super(props);
@@ -11,6 +15,19 @@ class Scrubber extends Component {
 		this.eventLength = 0;
 		this.eventsUpdated = false;
 		this.scrollerWidth = this.refs.scrubber.scrollWidth;
+
+		Draggable.create(
+			this.refs.scrubber,
+			{
+				type: "scroll",
+				edgeResistance: 0.5,
+				throwProps: true,
+				// snap: function(endValue) {
+				// 	console.log(endValue);
+				// 	return endValue + 100;
+				// }
+			}
+		)
 	}
 
 	componentWillReceiveProps(nextProps) {
@@ -74,7 +91,8 @@ class Scrubber extends Component {
 			var eventItem = this.props.events[index];
 			var $scrubberEvent = this.refs['scrubberEvent['+index+']'];
 			var scrollTo = $scrubberEvent.offsetLeft + ($scrubberEvent.clientWidth / 2) - ($scrubber.clientWidth / 2);
-			$scrubber.scrollLeft = scrollTo;
+			// $scrubber.scrollLeft = scrollTo;
+			TweenLite.to($scrubber, 1, {scrollTo:{x: scrollTo}, ease:Power2.easeOut});
 			this.props.onEventSelect(eventItem['stream']['camera']);
 		}
 	}
