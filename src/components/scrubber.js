@@ -119,7 +119,7 @@ class Scrubber extends Component {
 
 		var $scrubber = this.refs.scrubber;
 		$scrubber.addEventListener('scroll', (e) => {
-			scrollPagination(e.target);
+			// scrollPagination(e.target);
 		});
 	}
 
