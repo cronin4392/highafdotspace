@@ -9,8 +9,6 @@ import Intro from './components/intro';
 import Stream from './components/stream';
 import Interface from './components/interface';
 
-// var trackpad = new Trackpad(document);
-import Ajax from './modules/ajax';
 import data from '../public/api/data.json';
 
 class App extends Component {
@@ -19,38 +17,57 @@ class App extends Component {
 
 		this.state = {
 			time: {
-				current: Moment(1455104040000),
+				// current: Moment(1455104040000), // 1 el
+				current: Moment(1455104220000), // 2 el
+				// current: Moment(1455104270000),
 				count: 0,
 				launch: 0
 			},
+			mission: {},
 			events: {},
 			activeEvents: {},
 		}
 	}
 
 	componentDidMount() {
-		var interval = 100;
+		var interval = 500;
 		this.loadData();
 		setInterval(function() {
 			this.onTimeChange();
 		}.bind(this), interval);
+
+		window.appDraggable = Draggable.create(
+			this.refs.scroller,
+			{
+				type: "scrollTop",
+				edgeResistance: 1,
+				throwProps: true,
+				snap: function(endValue) {
+					return Math.round(-1 * endValue / window.innerHeight) * window.innerHeight;
+				}
+			}
+		)
 	}
 
 	render() {
 		return (
 			<div>
-				<div className="scroller">
-					{ /*
-					<div className="screen">
-						<Intro />
+				<div className="scroller" ref="scroller">
+					<div className="screen screen-passover">
+						<div className="screen--wrapper">
+							<Intro 
+								state={this.state}
+							/>
+						</div>
 					</div>
-					*/ }
-					<div className="screen" id="app">
-						<Stream />
-						<Interface
-							state={this.state}
-							onEventSelect={ this.onEventSelect }
-						/>
+					<div className="screen screen-fixed" id="app">
+						<div className="screen--wrapper">
+							<Stream />
+							<Interface
+								state={this.state}
+								onEventSelect={ this.onEventSelect }
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -58,6 +75,7 @@ class App extends Component {
 	}
 
 	onEventSelect(event) {
+		console.log('Event dispatched', event);
 		$(window).trigger('eventSelect', event);
 	}
 
@@ -70,11 +88,19 @@ class App extends Component {
 			})
 		);
 
+		this.setState({
+			'mission': data['mission']
+		})
+
 		var feed = _.sortBy(data['feed'], 'timestamp');
 		feed = _.filter(feed, {'visible': true});
 		this.setState({
 			'events': feed
 		});
+
+		setTimeout(function() {
+			this.onTimeChange();
+		}.bind(this), 10);
 	}
 
 	onTimeChange() {
@@ -100,9 +126,11 @@ class App extends Component {
 			return greaterThan;
 		});
 
-		this.setState({
-			'activeEvents': activeEvents
-		})
+		if(activeEvents.length !== this.state['activeEvents'].length) {
+			this.setState({
+				'activeEvents': activeEvents
+			})
+		}
 	}
 }
 

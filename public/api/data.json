@@ -14,8 +14,8 @@ var data = {
   "launch_site": "Space Launch Complex (SLC)-6 at Vandenberg Air Force Base, California",
   "notes": "NROL-45 will be the 31st Delta IV mission since the vehicle’s inaugural launch in 2002, and the 9th NRO mission to launch on Delta IV.",
   "feed_count": 324,
-  "visible_milestone_count": 9,
-  "invisible_milestone_count": 14,
+  "visible_milestone_count": 6,
+  "invisible_milestone_count": 17,
   "not_milestone_count": 301,
   "feed": [
     {
@@ -24,26 +24,11 @@ var data = {
       "milestone_source": "nasa_countdown_101",
       "visible": true,
       "name": "T-5 minutes, 0 seconds",
+      "description": "Starting auxiliary power units.",
       "stream": {
         "type": "3d",
         "camera": "M-1"
       },
-      "description": "Start auxiliary power units.",
-      "conditions": {
-        "temp": 71
-      }
-    },
-    {
-      "timestamp": 1455104105,
-      "milestone": true,
-      "milestone_source": "nasa_countdown_101",
-      "visible": true,
-      "stream": {
-        "type": "3d",
-        "camera": "M-2"
-      },
-      "name": "T-3 minutes, 55 seconds",
-      "description": "Start orbiter aerosurface profile test, followed by main engine gimbal profile test",
       "conditions": {
         "temp": 71
       }
@@ -53,27 +38,12 @@ var data = {
       "milestone": true,
       "milestone_source": "launch_replay_video",
       "visible": true,
+      "name": "T-3 minutes, 20 seconds",
+      "description": "CBC liquid hydrogen and liquid oxygen tank secured.",
       "stream": {
         "type": "3d",
         "camera": "M-3"
       },
-      "name": "T-3 minutes, 20 seconds",
-      "description": "CBC liquid hydrogen and liquid oxygen tank secured. Propellant fill and drain valves closed.",
-      "conditions": {
-        "temp": 71
-      }
-    },
-    {
-      "timestamp": 1455104160,
-      "milestone": true,
-      "milestone_source": "launch_replay_video",
-      "visible": true,
-      "stream": {
-        "type": "3d",
-        "camera": "M-4"
-      },
-      "name": "T-3 minutes",
-      "description": "Vehicle ordinance system armed. Booster liquid oxygen and liquid hydrogen propellant tanks verified and at flight pressure and flight level.",
       "conditions": {
         "temp": 71
       }
@@ -83,12 +53,12 @@ var data = {
       "milestone": true,
       "milestone_source": "launch_replay_video",
       "visible": true,
+      "name": "T-2 minutes, 0 seconds",
+      "description": "Hydraulic system pressure verified.",
       "stream": {
         "type": "3d",
         "camera": "M-5"
       },
-      "name": "T-2 minutes, 0 seconds",
-      "description": "Hydraulic system pressure verified. Booster, DCSS and flight termination system battery voltages are confirmed.",
       "conditions": {
         "temp": 71
       }
@@ -98,12 +68,12 @@ var data = {
       "milestone": true,
       "milestone_source": "launch_replay_video",
       "visible": true,
+      "name": "T-1 minute, 20 seconds",
+      "description": "Securing second stage liquid hydrogen tank.",
       "stream": {
         "type": "3d",
         "camera": "M-6"
       },
-      "name": "T-1 minute, 20 seconds",
-      "description": "Securing second stage liquid hydrogen tank.",
       "conditions": {
         "temp": 71
       }
@@ -113,27 +83,12 @@ var data = {
       "milestone": true,
       "milestone_source": "nasa_countdown_101",
       "visible": true,
+      "name": "T-50 seconds",
+      "description": "Launch enabled 'on'. Main power turned 'off'",
       "stream": {
         "type": "3d",
         "camera": "M-7"
       },
-      "name": "T-50 seconds",
-      "description": "Orbiter transfers from ground to internal power",
-      "conditions": {
-        "temp": 71
-      }
-    },
-    {
-      "timestamp": 1455104309,
-      "milestone": true,
-      "milestone_source": "nasa_countdown_101",
-      "visible": true,
-      "stream": {
-        "type": "3d",
-        "camera": "M-8"
-      },
-      "name": "T-31 seconds",
-      "description": "Ground launch sequencer is go for auto sequence start",
       "conditions": {
         "temp": 71
       }
@@ -143,12 +98,12 @@ var data = {
       "milestone": true,
       "milestone_source": "launch_replay_video",
       "visible": true,
+      "name": "T-25 seconds",
+      "description": "Solid Rocket Motor Thrust Vector Control System Blowdown.",
       "stream": {
         "type": "3d",
         "camera": "M-9"
       },
-      "name": "T-25 seconds",
-      "description": "Launch vehicle and spacecraft status check complete.",
       "conditions": {
         "temp": 71
       }
@@ -170,7 +125,11 @@ var data = {
       "milestone_source": "nasa_countdown_101",
       "visible": false,
       "name": "T-7 minutes, 30 seconds",
-      "description": "Retract orbiter access arm.",
+      "description": "Retracting orbiter access arm.",
+      "stream": {
+        "type": "3d",
+        "path": "/somepath"
+      },
       "conditions": {
         "temp": 71
       }
@@ -181,7 +140,11 @@ var data = {
       "milestone_source": "nasa_countdown_101",
       "visible": false,
       "name": "T-5 minutes, 0 seconds",
-      "description": "Arm solid rocket booster range safety safe and arm devices",
+      "description": "Arm solid rocket booster, range safety safe, and arm devices",
+      "stream": {
+        "type": "3d",
+        "path": "/somepath"
+      },
       "conditions": {
         "temp": 71
       }
@@ -198,12 +161,42 @@ var data = {
       }
     },
     {
+      "timestamp": 1455104105,
+      "milestone": true,
+      "milestone_source": "nasa_countdown_101",
+      "visible": false,
+      "name": "T-3 minutes, 55 seconds",
+      "description": "Starting orbiter aerosurface profile test.",
+      "stream": {
+        "type": "3d",
+        "camera": "M-2"
+      },
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
       "timestamp": 1455104128,
       "milestone": true,
       "milestone_source": "launch_replay_video",
       "visible": false,
       "name": "T-3 minutes, 32 seconds",
       "description": "Transfer from ground facility power to internal battery power complete.",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104160,
+      "milestone": true,
+      "milestone_source": "launch_replay_video",
+      "visible": false,
+      "name": "T-3 minutes",
+      "description": "Booster liquid oxygen and liquid hydrogen propellant tanks verified.",
+      "stream": {
+        "type": "3d",
+        "camera": "M-4"
+      },
       "conditions": {
         "temp": 71
       }
@@ -253,6 +246,21 @@ var data = {
       }
     },
     {
+      "timestamp": 1455104309,
+      "milestone": true,
+      "milestone_source": "nasa_countdown_101",
+      "visible": false,
+      "name": "T-31 seconds",
+      "description": "Ground launch sequencer is go for auto sequence start",
+      "stream": {
+        "type": "3d",
+        "camera": "M-8"
+      },
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
       "timestamp": 1455104324,
       "milestone": true,
       "milestone_source": "nasa_countdown_101",
@@ -267,13 +275,13 @@ var data = {
       "timestamp": 1455104325,
       "milestone": true,
       "milestone_source": "launch_replay_video",
+      "visible": false,
+      "name": "T-15 seconds",
+      "description": "Radial Outward Firing Igniters burning off excess hydrogen.",
       "stream": {
         "type": "3d",
         "camera": "Body"
       },
-      "visible": false,
-      "name": "T-15 seconds",
-      "description": "Radial Outward Firing Igniters (ROFIs, or “sparklers”) are guided to burn off excess hydrogen at the base of the vehicle.",
       "conditions": {
         "temp": 71
       }
@@ -282,13 +290,13 @@ var data = {
       "timestamp": 1455104330,
       "milestone": true,
       "milestone_source": "nasa_countdown_101",
+      "name": "T-10 seconds",
+      "description": "Activate main engine hydrogen burnoff system",
       "stream": {
         "type": "3d",
         "camera": "Body"
       },
       "visible": false,
-      "name": "T-10 seconds",
-      "description": "Activate main engine hydrogen burnoff system",
       "conditions": {
         "temp": 71
       }
@@ -308,13 +316,13 @@ var data = {
       "timestamp": 1455104340,
       "milestone": true,
       "milestone_source": "nasa_countdown_101",
+      "name": "T-0",
+      "description": "Solid rocket booster ignition and liftoff",
       "stream": {
         "type": "3d",
         "camera": "Body"
       },
       "visible": false,
-      "name": "T-0",
-      "description": "Solid rocket booster ignition and liftoff",
       "conditions": {
         "temp": 71
       }

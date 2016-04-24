@@ -12,10 +12,10 @@ const Interface = (props) => {
 	return (
 		<div className="interface">
 			<div className="interface--countdown">
-				<span className="unit">{ countDown.hours() } Hr</span>
-				<span className="unit">{ countDown.minutes() } Min</span>
-				<span className="unit">{ countDown.seconds() } Sec</span>
-				<span className="unit">{ currentTime.format('HH:mm:ss') }</span>
+				<span className="block">{ countDown.hours() } Hr</span>
+				<span className="block">{ countDown.minutes() } Min</span>
+				<span className="block">{ countDown.seconds() } Sec</span>
+				<span className="block">{ currentTime.format('HH:mm:ss') }</span>
 				{/*
 				<span className="unit">{ launchTime.format() }</span>
 				*/}
