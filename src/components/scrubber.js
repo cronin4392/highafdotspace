@@ -78,7 +78,7 @@ class Scrubber extends Component {
 						<span className="scrubber--event--dot">
 						</span>
 						<span className="scrubber--event--time">
-							{Moment(eventItem.timestamp * 1000).format('HH:mm:ss')}
+							{Moment(eventItem.timestamp * 1000).format('HH:mm:ss A')}
 						</span>
 					</button>
 				)
