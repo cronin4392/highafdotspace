@@ -280,7 +280,7 @@
       "description": "Radial Outward Firing Igniters burning off excess hydrogen.",
       "stream": {
         "type": "3d",
-        "camera": "Body"
+        "camera": "M-10-omitted"
       },
       "conditions": {
         "temp": 71
@@ -291,10 +291,10 @@
       "milestone": true,
       "milestone_source": "nasa_countdown_101",
       "name": "T-10 seconds",
-      "description": "Activate main engine hydrogen burnoff system",
+      "description": "Activating main engine hydrogen burnoff system",
       "stream": {
         "type": "3d",
-        "camera": "Body"
+        "camera": "M-10"
       },
       "visible": false,
       "conditions": {
@@ -308,6 +308,10 @@
       "visible": false,
       "name": "T-6.6 seconds",
       "description": "Main engine start",
+      "stream": {
+        "type": "3d",
+        "camera": "M-11"
+      },
       "conditions": {
         "temp": 71
       }
@@ -320,7 +324,7 @@
       "description": "Solid rocket booster ignition and liftoff",
       "stream": {
         "type": "3d",
-        "camera": "Body"
+        "camera": "M-12"
       },
       "visible": false,
       "conditions": {
