@@ -135,7 +135,6 @@
       "milestone_source": "launch_replay_video",
       "visible": true,
       "name": "17 seconds",
-      "description": "1st Camera Angle Change",
       "stream": {
         "type": "3d",
         "camera": "F-1"

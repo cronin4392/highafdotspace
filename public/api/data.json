@@ -42,7 +42,8 @@ var data = {
       "description": "Starting auxiliary power units.",
       "stream": {
         "type": "3d",
-        "camera": "M-1"
+        "camera": "M-1",
+        "audio_path": "https://s3.amazonaws.com/keezer/delta4-M-1-T-5minutes.mp3"
       },
       "conditions": {
         "temp": 71
@@ -57,7 +58,8 @@ var data = {
       "description": "CBC liquid hydrogen and liquid oxygen tank secured.",
       "stream": {
         "type": "3d",
-        "camera": "M-3"
+        "camera": "M-3",
+        "audio_path": "https://s3.amazonaws.com/keezer/delta4-M-3-T-3mins-20seconds.mp3"
       },
       "conditions": {
         "temp": 71
@@ -72,7 +74,8 @@ var data = {
       "description": "Hydraulic system pressure verified.",
       "stream": {
         "type": "3d",
-        "camera": "M-5"
+        "camera": "M-5",
+        "audio_path": "https://s3.amazonaws.com/keezer/delta4-M-5-T-2minutes.mp3"
       },
       "conditions": {
         "temp": 71
@@ -87,7 +90,8 @@ var data = {
       "description": "Securing second stage liquid hydrogen tank.",
       "stream": {
         "type": "3d",
-        "camera": "M-6"
+        "camera": "M-6",
+        "audio_path": "https://s3.amazonaws.com/keezer/delta4-M-6-T-1min-20seconds.mp3"
       },
       "conditions": {
         "temp": 71
@@ -102,7 +106,8 @@ var data = {
       "description": "Launch enabled 'on'. Main power turned 'off'",
       "stream": {
         "type": "3d",
-        "camera": "M-7"
+        "camera": "M-7",
+        "audio_path": "https://s3.amazonaws.com/keezer/delta4-M-7-T-50seconds.mp3"
       },
       "conditions": {
         "temp": 71
@@ -117,7 +122,8 @@ var data = {
       "description": "Solid Rocket Motor Thrust Vector Control System Blowdown.",
       "stream": {
         "type": "3d",
-        "camera": "M-9"
+        "camera": "M-9",
+        "audio_path": "https://s3.amazonaws.com/keezer/delta4-M-9-T-25seconds.mp3"
       },
       "conditions": {
         "temp": 71
@@ -129,7 +135,6 @@ var data = {
       "milestone_source": "launch_replay_video",
       "visible": true,
       "name": "17 seconds",
-      "description": "1st Camera Angle Change",
       "stream": {
         "type": "3d",
         "camera": "F-1"
@@ -139,11 +144,11 @@ var data = {
       }
     },
     {
-      "timestamp": 1455104331,
+      "timestamp": 1455104327,
       "milestone": true,
       "milestone_source": "launch_replay_video",
       "visible": true,
-      "name": "9 seconds",
+      "name": "13 seconds",
       "stream": {
         "type": "3d",
         "camera": "F-2"
@@ -153,14 +158,15 @@ var data = {
       }
     },
     {
-      "timestamp": 1455104339,
+      "timestamp": 1455104335,
       "milestone": true,
       "milestone_source": "launch_replay_video",
       "visible": true,
-      "name": "1 second",
+      "name": "5 seconds",
       "stream": {
         "type": "3d",
-        "camera": "F-3"
+        "camera": "F-3",
+        "audio_stream": "https://s3.amazonaws.com/keezer/delta4-M-10-T-10seconds.mp3"
       },
       "conditions": {
         "temp": 71
@@ -170,7 +176,7 @@ var data = {
       "timestamp": 1455104340,
       "milestone": true,
       "milestone_source": "nasa_countdown_101",
-      "visible": true,      
+      "visible": true,
       "name": "T-0",
       "description": "Solid rocket booster ignition and liftoff",
       "stream": {
