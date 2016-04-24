@@ -120,16 +120,6 @@ button {
   button:active {
     outline: 0; }
 
-/* line 1, /Users/stephencronin/Sites/highafdotspace/src/style/components/_screen.scss */
-.scroller {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-  overflow: auto; }
-
 /* line 7, /Users/stephencronin/Sites/highafdotspace/src/style/components/_screen.scss */
 .screen {
   display: block;
@@ -216,7 +206,7 @@ button {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 2em;
+  bottom: 0;
   pointer-events: auto;
   padding: 2em 0 1em 0;
   overflow: auto;
