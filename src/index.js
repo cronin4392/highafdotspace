@@ -30,6 +30,7 @@ class App extends Component {
 		}
 
 		this.streamLoaded = false;
+		this.introPassed = false;
 		this.queuedEvent;
 	}
 
@@ -64,8 +65,13 @@ class App extends Component {
 		});
 
 		window.addEventListener('scroll', (e) => {
-			if(this.refs.main.getBoundingClientRect().top < 10) {
+			if(this.refs.main.getBoundingClientRect().top < 10 && !this.introPassed) {
+				this.introPassed = true;
 				document.body.classList.add('main-active');
+				this.triggerQueuedEvent();
+			}
+			else if(this.introPassed) {
+				this.introPassed = false;
 			}
 		});
 	}
@@ -106,14 +112,18 @@ class App extends Component {
 			console.log('Event dispatched', eventName, this.streamLoaded);
 			el.contentWindow.postMessage({eventName: eventName}, '*');
 		});
-		if(this.queuedEvent) {
+		this.triggerQueuedEvent();
+	}
+
+	triggerQueuedEvent() {
+		if(this.queuedEvent && this.introPassed && this.streamLoaded) {
 			this.onEventSelect(this.queuedEvent);
 			this.queuedEvent = null;
 		}
 	}
 
 	onEventSelect(event) {
-		if(this.streamLoaded) {
+		if(this.streamLoaded && this.introPassed) {
 			$(window).trigger('eventSelect', event);
 		}
 		else {

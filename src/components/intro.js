@@ -18,10 +18,10 @@ const Intro = (props) => {
 				time={ props.state['time'] }
 				className="intro--countdown"
 			/>
-			<a className="intro--cta" href="#app">
+			<div className="intro--cta">
 				<img src="/public/images/up_arrow.png" alt="View" /><br />
 				<span>Updates</span>
-			</a>
+			</div>
 		</div>
 	);
 }
