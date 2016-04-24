@@ -136,7 +136,7 @@ class Scrubber extends Component {
 				$scrubber.getBoundingClientRect().top + ($scrubber.clientHeight / 2)
 			];
 			var el = document.elementFromPoint(middle[0], middle[1]);
-			if(el.classList.contains('scrubber--event')) {
+			if(el && el.classList.contains('scrubber--event')) {
 				var id = el.getAttribute('data-event-index');
 				this.gotoEvent(id, true);
 			}
