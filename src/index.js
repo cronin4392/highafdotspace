@@ -17,8 +17,8 @@ class App extends Component {
 
 		this.state = {
 			time: {
-				// current: Moment(1455104286000), // T-1
-				current: Moment(1455103860000), // T-8
+				current: Moment(1455104286000), // T-1
+				// current: Moment(1455103860000), // T-8
 				count: 0,
 				launch: 0
 			},
@@ -51,12 +51,19 @@ class App extends Component {
 		// 	}
 		// )
 
+		$('a[href*="#"]').on('click', (e) => {
+			var target = e.target.getAttribute('href').substring(1);
+
+			TweenLite.to(window, 1, {
+				scrollTo:{y: $('#'+target).offsetTop},
+				ease:Power2.easeOut
+			});
+
+			e.preventDefault();
+		});
+
 		window.addEventListener('scroll', (e) => {
 			if(this.refs.main.getBoundingClientRect().top < 10) {
-				// var scrollTo = this.refs.main.offsetTop;
-				// if(scrollTo > 0) {
-				// 	window.scrollTo(0, scrollTo);
-				// }
 				document.body.classList.add('main-active');
 			}
 		});

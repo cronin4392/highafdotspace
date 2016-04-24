@@ -3,10 +3,6 @@ import ReactDOM from 'react-dom';
 import Moment from 'moment';
 import _ from 'lodash';
 
-// import TweenLite from '../modules/Greensock/TweenLite.min.js';
-// import Draggable from '../modules/Greensock/utils/Draggable.min.js';
-// import CSSPlugin from '../modules/Greensock/plugins/CSSPlugin.min.js';
-
 class Scrubber extends Component {
 	constructor(props) {
 		super(props);
@@ -128,8 +124,6 @@ class Scrubber extends Component {
 	}
 
 	scrollPagination($scrubber) {
-		// console.log(this.scrollAnimating);
-
 		if(!this.scrollAnimating) {
 			var middle = [
 				$scrubber.getBoundingClientRect().left + ($scrubber.clientWidth / 2),

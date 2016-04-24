@@ -4,7 +4,6 @@ import Moment from 'moment';
 import Scrubber from './scrubber';
 import Countdown from './countdown';
 
-//const Interface = ({state, onEventSelect}) => {
 class Interface extends Component {
 	constructor(props) {
 		super(props);
