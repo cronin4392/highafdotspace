@@ -5,14 +5,20 @@ import Scrubber from './scrubber';
 
 const Interface = (props) => {
 	var state = props['state'];
-	const time = Moment(state['time']['count']);
+	const countDown = Moment.duration(state['time']['count']);
+	const currentTime = Moment(state['time']['current']);
+	const launchTime = Moment(state['time']['launch']);
 
 	return (
 		<div className="interface">
 			<div className="interface--countdown">
-				<span className="unit">{ time.format("HH") } Hr</span>
-				<span className="unit">{ time.format("mm") } Min</span>
-				<span className="unit">{ time.format("ss") } Sec</span>
+				<span className="unit">{ countDown.hours() } Hr</span>
+				<span className="unit">{ countDown.minutes() } Min</span>
+				<span className="unit">{ countDown.seconds() } Sec</span>
+				{/*
+				<span className="unit">{ currentTime.format() }</span>
+				<span className="unit">{ launchTime.format() }</span>
+				*/}
 			</div>
 			<Scrubber
 				events={ state['events'] }

@@ -82,11 +82,13 @@ class App extends Component {
 		var newCurrentTime = Moment(lastCurrentTime + 1000);
 		var launchTime = this.state['time']['launch'];
 
+		var diff = launchTime.diff(newCurrentTime);
+
 		this.setState(
 			ReactUpdate(this.state, {
 				time: {
 					current: {$set: newCurrentTime},
-					count: {$set: Moment(this.state['time']['launch'].diff(this.state['time']['current']))}
+					count: {$set: diff}
 				}
 			})
 		);
