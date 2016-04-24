@@ -24,6 +24,7 @@
       "milestone_source": "nasa_countdown_101",
       "visible": true,
       "name": "T-5 minutes, 0 seconds",
+      "description": "Starting auxiliary power units.",
       "stream": {
         "type": "3d",
         "camera": "M-1"
@@ -38,6 +39,8 @@
       "milestone": true,
       "milestone_source": "nasa_countdown_101",
       "visible": true,
+      "name": "T-3 minutes, 55 seconds",
+      "description": "Starting orbiter aerosurface profile test.",
       "stream": {
         "type": "3d",
         "camera": "M-2"
@@ -53,6 +56,8 @@
       "milestone": true,
       "milestone_source": "launch_replay_video",
       "visible": true,
+      "name": "T-3 minutes, 20 seconds",
+      "description": "CBC liquid hydrogen and liquid oxygen tank secured.",
       "stream": {
         "type": "3d",
         "camera": "M-3"
@@ -68,6 +73,8 @@
       "milestone": true,
       "milestone_source": "launch_replay_video",
       "visible": true,
+      "name": "T-3 minutes",
+      "description": "Booster liquid oxygen and liquid hydrogen propellant tanks verified.",
       "stream": {
         "type": "3d",
         "camera": "M-4"
@@ -83,6 +90,8 @@
       "milestone": true,
       "milestone_source": "launch_replay_video",
       "visible": true,
+      "name": "T-2 minutes, 0 seconds",
+      "description": "Hydraulic system pressure verified.",
       "stream": {
         "type": "3d",
         "camera": "M-5"
@@ -113,6 +122,8 @@
       "milestone": true,
       "milestone_source": "nasa_countdown_101",
       "visible": true,
+      "name": "T-50 seconds",
+      "description": "Orbiter transferring from ground to internal power",
       "stream": {
         "type": "3d",
         "camera": "M-7"
@@ -170,7 +181,11 @@
       "milestone_source": "nasa_countdown_101",
       "visible": false,
       "name": "T-7 minutes, 30 seconds",
-      "description": "Retract orbiter access arm.",
+      "description": "Retracting orbiter access arm.",
+      "stream": {
+        "type": "3d",
+        "path": "/somepath"
+      },
       "conditions": {
         "temp": 71
       }
@@ -181,7 +196,11 @@
       "milestone_source": "nasa_countdown_101",
       "visible": false,
       "name": "T-5 minutes, 0 seconds",
-      "description": "Arm solid rocket booster range safety safe and arm devices",
+      "description": "Arm solid rocket booster, range safety safe, and arm devices",
+      "stream": {
+        "type": "3d",
+        "path": "/somepath"
+      },
       "conditions": {
         "temp": 71
       }
@@ -267,6 +286,9 @@
       "timestamp": 1455104325,
       "milestone": true,
       "milestone_source": "launch_replay_video",
+      "visible": false,
+      "name": "T-15 seconds",
+      "description": "Radial Outward Firing Igniters burning off excess hydrogen.",
       "stream": {
         "type": "3d",
         "camera": "Body"
