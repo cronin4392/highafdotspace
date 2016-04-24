@@ -9,8 +9,6 @@ import Intro from './components/intro';
 import Stream from './components/stream';
 import Interface from './components/interface';
 
-// var trackpad = new Trackpad(document);
-import Ajax from './modules/ajax';
 import data from '../public/api/data.json';
 
 class App extends Component {
@@ -25,6 +23,7 @@ class App extends Component {
 				count: 0,
 				launch: 0
 			},
+			mission: {},
 			events: {},
 			activeEvents: {},
 		}
@@ -42,17 +41,21 @@ class App extends Component {
 		return (
 			<div>
 				<div className="scroller">
-					{ /*
-					<div className="screen">
-						<Intro />
+					<div className="screen screen-passover">
+						<div className="screen--wrapper">
+							<Intro 
+								state={this.state}
+							/>
+						</div>
 					</div>
-					*/ }
-					<div className="screen" id="app">
-						<Stream />
-						<Interface
-							state={this.state}
-							onEventSelect={ this.onEventSelect }
-						/>
+					<div className="screen screen-fixed" id="app">
+						<div className="screen--wrapper">
+							<Stream />
+							<Interface
+								state={this.state}
+								onEventSelect={ this.onEventSelect }
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -72,6 +75,10 @@ class App extends Component {
 				}
 			})
 		);
+
+		this.setState({
+			'mission': data['mission']
+		})
 
 		var feed = _.sortBy(data['feed'], 'timestamp');
 		feed = _.filter(feed, {'visible': true});

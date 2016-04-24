@@ -1,8 +1,11 @@
 .stream {
 	@include abs();
+	position: fixed;
+	pointer-events: none;
 	z-index: 0;
 
 	iframe {
 		@include abs();
+		position: absolute !important;
 	}
 }
