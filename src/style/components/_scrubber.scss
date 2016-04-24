@@ -2,30 +2,28 @@
 	position: absolute;
 	left: 0;
 	right: 0;
-	bottom: 5em;
+	bottom: 2em;
 
 	pointer-events: auto;
 
-	padding: 2em 1em 1em 1em;
+	padding: 2em 0 1em 0;
 	overflow: auto;
 	-webkit-overflow-scrolling: touch;
 	white-space: nowrap;
 
 	color: $red;
-
-	&:after {
-		content: '';
-		display: inline-block;
-		margin-left: calc(50vw - 2.25em);
-	}
 }
 
 	.scrubber--event {
 		display: inline-block;
 		vertical-align: middle;
-		margin-left: calc(50vw - 2.25em);
+		margin-left: calc(50vw - 1.25em);
 		position: relative;
 		padding: 1em;
+
+		&:last-child {
+			margin-right: calc(50vw - 1.25em);
+		}
 	}
 
 		.scrubber--event--time {

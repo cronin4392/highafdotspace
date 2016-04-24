@@ -19,7 +19,9 @@ class App extends Component {
 
 		this.state = {
 			time: {
-				current: Moment(1455104040000),
+				// current: Moment(1455104040000), // 1 el
+				current: Moment(1455104106000), // 2 el
+				// current: Moment(1455104270000),
 				count: 0,
 				launch: 0
 			},
@@ -29,7 +31,7 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		var interval = 100;
+		var interval = 50;
 		this.loadData();
 		setInterval(function() {
 			this.onTimeChange();
@@ -58,6 +60,7 @@ class App extends Component {
 	}
 
 	onEventSelect(event) {
+		console.log('Event dispatched', event);
 		$(window).trigger('eventSelect', event);
 	}
 
@@ -75,6 +78,10 @@ class App extends Component {
 		this.setState({
 			'events': feed
 		});
+
+		setTimeout(function() {
+			this.onTimeChange();
+		}.bind(this), 10);
 	}
 
 	onTimeChange() {
@@ -100,9 +107,11 @@ class App extends Component {
 			return greaterThan;
 		});
 
-		this.setState({
-			'activeEvents': activeEvents
-		})
+		if(activeEvents.length !== this.state['activeEvents'].length) {
+			this.setState({
+				'activeEvents': activeEvents
+			})
+		}
 	}
 }
 
