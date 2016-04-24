@@ -19,12 +19,19 @@ class Scrubber extends Component {
 		Draggable.create(
 			this.refs.scrubber,
 			{
-				type: "scroll",
+				type: "scrollLeft",
 				edgeResistance: 0.5,
 				throwProps: true,
-				// snap: function(endValue) {
-				// 	console.log(endValue);
-				// 	return endValue + 100;
+				// onDragStart: function() {
+				// 	if(window.appDraggable) {
+				// 		window.appDraggable[0].disable();
+				// 		console.log(window.appDraggable[0]);
+				// 	}
+				// },
+				// onDragEnd: function() {
+				// 	if(window.appDraggable) {
+				// 		window.appDraggable[0].enable();
+				// 	}
 				// }
 			}
 		)

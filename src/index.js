@@ -18,7 +18,7 @@ class App extends Component {
 		this.state = {
 			time: {
 				// current: Moment(1455104040000), // 1 el
-				current: Moment(1455104106000), // 2 el
+				current: Moment(1455104220000), // 2 el
 				// current: Moment(1455104270000),
 				count: 0,
 				launch: 0
@@ -35,12 +35,24 @@ class App extends Component {
 		setInterval(function() {
 			this.onTimeChange();
 		}.bind(this), interval);
+
+		window.appDraggable = Draggable.create(
+			this.refs.scroller,
+			{
+				type: "scrollTop",
+				edgeResistance: 1,
+				throwProps: true,
+				snap: function(endValue) {
+					return Math.round(-1 * endValue / window.innerHeight) * window.innerHeight;
+				}
+			}
+		)
 	}
 
 	render() {
 		return (
 			<div>
-				<div className="scroller">
+				<div className="scroller" ref="scroller">
 					<div className="screen screen-passover">
 						<div className="screen--wrapper">
 							<Intro 
