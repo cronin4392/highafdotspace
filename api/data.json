@@ -132,7 +132,7 @@
       "description": "1st Camera Angle Change",
       "stream": {
         "type": "3d",
-        "camera": "M-13"
+        "camera": "Final-1"
       },
       "conditions": {
         "temp": 71
@@ -147,7 +147,7 @@
       "description": "2nd Camera Angle Change",
       "stream": {
         "type": "3d",
-        "camera": "M-14"
+        "camera": "Final-2"
       },
       "conditions": {
         "temp": 71
@@ -162,7 +162,7 @@
       "description": "3rd Camera Angle Change",
       "stream": {
         "type": "3d",
-        "camera": "M-15"
+        "camera": "Final-3"
       },
       "conditions": {
         "temp": 71
