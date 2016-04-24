@@ -17,7 +17,7 @@ class App extends Component {
 
 		this.state = {
 			time: {
-				current: Moment(1455104286000), // T-1
+				current: Moment(1455104315000), // T-1
 				// current: Moment(1455103860000), // T-8
 				count: 0,
 				launch: 0
@@ -102,7 +102,7 @@ class App extends Component {
 	onStreamLoad(el) {
 		this.streamLoaded = true;
 		$(window).on('eventSelect', function(event, eventName) {
-			console.log('Event dispatched', event, this.streamLoaded);
+			console.log('Event dispatched', eventName, this.streamLoaded);
 			el.contentWindow.postMessage({eventName: eventName}, '*');
 		});
 		if(this.queuedEvent) {
