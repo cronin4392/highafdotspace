@@ -8,10 +8,12 @@ class Scrubber extends Component {
 	}
 
 	componentDidMount() {
-		setTimeout(function() {
-			var scrubber = this.refs.scrubber;
-			scrubber.scrollLeft = scrubber.scrollWidth;
-		}.bind(this), 10)
+		// setTimeout(function() {
+		// 	var scrubber = this.refs.scrubber;
+		// 	if(scrubber) {
+		// 		scrubber.scrollLeft = scrubber.scrollWidth;
+		// 	};
+		// }.bind(this), 10)
 	}
 
 	render() {
@@ -21,21 +23,27 @@ class Scrubber extends Component {
 				var stream = event['stream'] || {};
 				var camera = stream['camera'] || null;
 
-				return (
-					<button
-						className="scrubber--event"
-						data-event-name={event['name']}
-						data-event-camera={camera}
-						key={index}
-						onClick={() => this.props.onEventSelect(camera)}
-					>
-						<span className="scrubber--event--dot">
-						</span>
-						<span className="scrubber--event--time">
-							{Moment(event.timestamp * 1000).format('HH:mm:ss')}
-						</span>
-					</button>
-				)
+				if(true) {
+					// console.log( event['timestamp'],  );
+					return (
+						<button
+							className="scrubber--event"
+							data-event-name={event['name']}
+							data-event-camera={camera}
+							key={index}
+							onClick={() => this.props.onEventSelect(camera)}
+						>
+							<span className="scrubber--event--dot">
+							</span>
+							<span className="scrubber--event--time">
+								{Moment(event.timestamp * 1000).format('HH:mm:ss')}
+							</span>
+						</button>
+					)
+				}
+				else {
+					return '';
+				}
 			});
 
 			return (

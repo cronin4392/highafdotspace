@@ -10,19 +10,19 @@
 	overflow: auto;
 	white-space: nowrap;
 
-	background: gray;
+	color: $red;
 
 	&:after {
 		content: '';
 		display: inline-block;
-		margin-left: calc(50vw - 2em);
+		margin-left: calc(50vw - 2.25em);
 	}
 }
 
 	.scrubber--event {
 		display: inline-block;
 		vertical-align: middle;
-		margin-left: calc(50vw - 2em);
+		margin-left: calc(50vw - 2.25em);
 		position: relative;
 		padding: 1em;
 	}
@@ -30,7 +30,7 @@
 		.scrubber--event--time {
 			position: absolute;
 			left: 50%;
-			top: -1em;
+			top: -0.5em;
 			transform: translateX(-50%);
 		}
 
@@ -38,6 +38,7 @@
 			display: block;
 			height: 0.5em;
 			width: 0.5em;
+			border-radius: 50%;
 
-			background: #000000;
+			background: $red;
 		}

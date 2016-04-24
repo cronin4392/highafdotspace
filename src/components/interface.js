@@ -15,13 +15,13 @@ const Interface = (props) => {
 				<span className="unit">{ countDown.hours() } Hr</span>
 				<span className="unit">{ countDown.minutes() } Min</span>
 				<span className="unit">{ countDown.seconds() } Sec</span>
+				<span className="unit">{ currentTime.format('HH:mm:ss') }</span>
 				{/*
-				<span className="unit">{ currentTime.format() }</span>
 				<span className="unit">{ launchTime.format() }</span>
 				*/}
 			</div>
 			<Scrubber
-				events={ state['events'] }
+				events={ state['activeEvents'] }
 				onEventSelect={props.onEventSelect}
 			/>
 		</div>
