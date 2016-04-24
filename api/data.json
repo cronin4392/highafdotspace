@@ -24,7 +24,7 @@
       "milestone_source": "nasa_countdown_101",
       "visible": true,
       "name": "T-5 minutes, 0 seconds",
-      "description": "Start auxiliary power units.",
+      "description": "Starting auxiliary power units.",
       "stream": {
         "type": "3d",
         "path": "/somepath"
@@ -39,7 +39,7 @@
       "milestone_source": "nasa_countdown_101",
       "visible": true,
       "name": "T-3 minutes, 55 seconds",
-      "description": "Start orbiter aerosurface profile test, followed by main engine gimbal profile test",
+      "description": "Starting orbiter aerosurface profile test.",
       "stream": {
         "type": "3d",
         "path": "/somepath"
@@ -54,7 +54,7 @@
       "milestone_source": "launch_replay_video",
       "visible": true,
       "name": "T-3 minutes, 20 seconds",
-      "description": "CBC liquid hydrogen and liquid oxygen tank secured. Propellant fill and drain valves closed.",
+      "description": "CBC liquid hydrogen and liquid oxygen tank secured.",
       "stream": {
         "type": "3d",
         "path": "/somepath"
@@ -69,7 +69,7 @@
       "milestone_source": "launch_replay_video",
       "visible": true,
       "name": "T-3 minutes",
-      "description": "Vehicle ordinance system armed. Booster liquid oxygen and liquid hydrogen propellant tanks verified and at flight pressure and flight level.",
+      "description": "Booster liquid oxygen and liquid hydrogen propellant tanks verified.",
       "stream": {
         "type": "3d",
         "path": "/somepath"
@@ -84,7 +84,7 @@
       "milestone_source": "launch_replay_video",
       "visible": true,
       "name": "T-2 minutes, 0 seconds",
-      "description": "Hydraulic system pressure verified. Booster, DCSS and flight termination system battery voltages are confirmed.",
+      "description": "Hydraulic system pressure verified.",
       "stream": {
         "type": "3d",
         "path": "/somepath"
@@ -114,7 +114,7 @@
       "milestone_source": "nasa_countdown_101",
       "visible": true,
       "name": "T-50 seconds",
-      "description": "Orbiter transfers from ground to internal power",
+      "description": "Orbiter transferring from ground to internal power",
       "stream": {
         "type": "3d",
         "path": "/somepath"
@@ -174,7 +174,7 @@
       "milestone_source": "nasa_countdown_101",
       "visible": false,
       "name": "T-7 minutes, 30 seconds",
-      "description": "Retract orbiter access arm.",
+      "description": "Retracting orbiter access arm.",
       "stream": {
         "type": "3d",
         "path": "/somepath"
@@ -189,7 +189,7 @@
       "milestone_source": "nasa_countdown_101",
       "visible": false,
       "name": "T-5 minutes, 0 seconds",
-      "description": "Arm solid rocket booster range safety safe and arm devices",
+      "description": "Arm solid rocket booster, range safety safe, and arm devices",
       "stream": {
         "type": "3d",
         "path": "/somepath"
@@ -309,7 +309,7 @@
       "milestone_source": "launch_replay_video",
       "visible": false,
       "name": "T-15 seconds",
-      "description": "Radial Outward Firing Igniters (ROFIs, or “sparklers”) are guided to burn off excess hydrogen at the base of the vehicle.",
+      "description": "Radial Outward Firing Igniters burning off excess hydrogen.",
       "stream": {
         "type": "3d",
         "path": "/somepath"
