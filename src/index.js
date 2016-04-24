@@ -18,7 +18,7 @@ class App extends Component {
 		this.state = {
 			time: {
 				// current: Moment(1455104040000), // 1 el
-				current: Moment(1455104220000), // 2 el
+				current: Moment(1455104270000), // 2 el
 				// current: Moment(1455104270000),
 				count: 0,
 				launch: 0
@@ -89,7 +89,8 @@ class App extends Component {
 		);
 
 		this.setState({
-			'mission': data['mission']
+			'rocket_name': data['rocket']['name'],
+			'launch_site': data['launch_site']
 		})
 
 		var feed = _.sortBy(data['feed'], 'timestamp');

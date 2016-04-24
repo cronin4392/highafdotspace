@@ -1,8 +1,8 @@
 @import 'utils/reset';
-@import 'utils/utils';
-@import 'utils/mixins';
 @import 'utils/colors';
 @import 'utils/fonts';
+@import 'utils/utils';
+@import 'utils/mixins';
 
 *,
 *:before,
@@ -28,6 +28,7 @@ body {
 
 }
 
+a,
 button {
 	@include reset();
 	cursor: pointer;

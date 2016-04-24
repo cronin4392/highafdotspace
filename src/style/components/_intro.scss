@@ -6,23 +6,60 @@
 
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 }
 
+	.intro--title {
+		margin-bottom: 1em;
+
+		p {
+			border-bottom: 1px solid rgba($red, 0.35);
+			margin-bottom: 0.25em;
+			padding: 0.5em 0;
+		}
+
+		p:first-child {
+			margin-top: -0.5em;
+		}
+	}
+
+	.intro--countdown {
+		font-family: Tungsten;
+		font-weight: 200;
+		font-size: 4.5em;
+		line-height: 0.888888889;
+
+		.number {
+			color: $red;
+		}
+
+		.block {
+			.hidden {
+				visibility: hidden;
+			}
+
+			&.faded {
+				opacity: 0.15;
+
+				&,
+				.number {
+					color: #eeeeee;
+				}
+			}
+		}
+	}
+
 	.intro--cta {
+		color: $red;
+
 		padding: 2em;
+		margin-top: auto;
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: -1em;
-	}
 
-	.intro--background {
-		@include abs();
-		z-index: -1;
+		text-align: center;
 
 		img {
-			object-fit: fill;
-			width: 100%;
-			height: 100%;
+			width: 1.6em;
 		}
 	}

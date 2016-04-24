@@ -2,6 +2,7 @@ import React from 'react';
 import Moment from 'moment';
 
 import Scrubber from './scrubber';
+import Countdown from './countdown';
 
 const Interface = (props) => {
 	var state = props['state'];
@@ -11,15 +12,10 @@ const Interface = (props) => {
 
 	return (
 		<div className="interface">
-			<div className="interface--countdown">
-				<span className="block">{ countDown.hours() } Hr</span>
-				<span className="block">{ countDown.minutes() } Min</span>
-				<span className="block">{ countDown.seconds() } Sec</span>
-				<span className="block">{ currentTime.format('HH:mm:ss') }</span>
-				{/*
-				<span className="unit">{ launchTime.format() }</span>
-				*/}
-			</div>
+			<Countdown
+				time={ state['time'] }
+				className="interface--countdown"
+			/>
 			<Scrubber
 				events={ state['activeEvents'] }
 				onEventSelect={props.onEventSelect}

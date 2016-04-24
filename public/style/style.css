@@ -52,6 +52,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: Tungsten;
+  font-weight: 200;
+  font-style: normal;
+  src: url("../fonts/TUNGSTEN_ROUNDED/TungstenRnd-Light.otf") format("opentype"); }
+
+@font-face {
+  font-family: Decima;
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/DecimaMono/DecimaMono.otf") format("opentype"); }
+
 /* line 1, /Users/stephencronin/Sites/highafdotspace/src/style/utils/_utils.scss */
 .pos-abs {
   position: absolute; }
@@ -76,17 +88,13 @@ table {
 .block {
   display: block; }
 
-@font-face {
-  font-family: Tungsten;
-  font-weight: 200;
-  font-style: normal;
-  src: url("../fonts/TUNGSTEN_ROUNDED/TungstenRnd-Light.otf") format("opentype"); }
+/* line 21, /Users/stephencronin/Sites/highafdotspace/src/style/utils/_utils.scss */
+.color-red {
+  color: #FC5C5C; }
 
-@font-face {
-  font-family: Decima;
-  font-weight: 400;
-  font-style: normal;
-  src: url("../fonts/DecimaMono/DecimaMono.otf") format("opentype"); }
+/* line 25, /Users/stephencronin/Sites/highafdotspace/src/style/utils/_utils.scss */
+.float-right {
+  float: right; }
 
 /* line 7, /Users/stephencronin/Sites/highafdotspace/src/style/style.scss */
 *,
@@ -104,6 +112,7 @@ body {
   color: #FFFFFF; }
 
 /* line 31, /Users/stephencronin/Sites/highafdotspace/src/style/style.scss */
+a,
 button {
   margin: 0;
   padding: 0;
@@ -114,9 +123,12 @@ button {
           appearance: none;
   color: inherit;
   font: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
   background: transparent;
   cursor: pointer; }
-  /* line 35, /Users/stephencronin/Sites/highafdotspace/src/style/style.scss */
+  /* line 36, /Users/stephencronin/Sites/highafdotspace/src/style/style.scss */
+  a:active,
   button:active {
     outline: 0; }
 
@@ -143,33 +155,52 @@ button {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+          flex-direction: column; }
 
-/* line 12, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
+/* line 11, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
+.intro--title {
+  margin-bottom: 1em; }
+  /* line 14, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
+  .intro--title p {
+    border-bottom: 1px solid rgba(252, 92, 92, 0.35);
+    margin-bottom: 0.25em;
+    padding: 0.5em 0; }
+  /* line 20, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
+  .intro--title p:first-child {
+    margin-top: -0.5em; }
+
+/* line 25, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
+.intro--countdown {
+  font-family: Tungsten;
+  font-weight: 200;
+  font-size: 4.5em;
+  line-height: 0.888888889; }
+  /* line 31, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
+  .intro--countdown .number {
+    color: #FC5C5C; }
+  /* line 36, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
+  .intro--countdown .block .hidden {
+    visibility: hidden; }
+  /* line 40, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
+  .intro--countdown .block.faded {
+    opacity: 0.15; }
+    /* line 43, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
+    .intro--countdown .block.faded,
+    .intro--countdown .block.faded .number {
+      color: #eeeeee; }
+
+/* line 51, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
 .intro--cta {
+  color: #FC5C5C;
   padding: 2em;
+  margin-top: auto;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: -1em; }
-
-/* line 19, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
-.intro--background {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1; }
-  /* line 23, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
-  .intro--background img {
-    -o-object-fit: fill;
-       object-fit: fill;
-    width: 100%;
-    height: 100%; }
+  margin-bottom: -1em;
+  text-align: center; }
+  /* line 62, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
+  .intro--cta img {
+    width: 1.6em; }
 
 /* line 1, /Users/stephencronin/Sites/highafdotspace/src/style/components/_stream.scss */
 .stream {
