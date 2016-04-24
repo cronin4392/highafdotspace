@@ -159,41 +159,43 @@ body.main-active .screen-passover {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.2) 90%, transparent 100%);
+  background: linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.2) 90%, transparent 100%); }
 
-/* line 11, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
+/* line 13, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
 .intro--title {
   margin-bottom: 1em; }
-  /* line 14, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
+  /* line 16, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
   .intro--title p {
     border-bottom: 1px solid rgba(252, 92, 92, 0.35);
     margin-bottom: 0.25em;
     padding: 0.5em 0; }
-  /* line 20, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
+  /* line 22, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
   .intro--title p:first-child {
     margin-top: -0.5em; }
 
-/* line 25, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
+/* line 27, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
 .intro--countdown {
   font-family: Tungsten;
   font-weight: 200;
   font-size: 4.5em;
   line-height: 0.888888889; }
-  /* line 31, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
+  /* line 33, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
   .intro--countdown .number {
     color: #FC5C5C; }
-  /* line 36, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
+  /* line 38, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
   .intro--countdown .block .hidden {
     visibility: hidden; }
-  /* line 40, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
+  /* line 42, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
   .intro--countdown .block.faded {
     opacity: 0.15; }
-    /* line 43, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
+    /* line 45, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
     .intro--countdown .block.faded,
     .intro--countdown .block.faded .number {
       color: #eeeeee; }
 
-/* line 51, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
+/* line 53, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
 .intro--cta {
   color: #FC5C5C;
   padding: 2em;
@@ -202,7 +204,7 @@ body.main-active .screen-passover {
   margin-right: auto;
   margin-bottom: -1em;
   text-align: center; }
-  /* line 62, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
+  /* line 64, /Users/stephencronin/Sites/highafdotspace/src/style/components/_intro.scss */
   .intro--cta img {
     width: 1.6em; }
 
