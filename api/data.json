@@ -25,10 +25,6 @@
       "visible": true,
       "name": "T-5 minutes, 0 seconds",
       "description": "Start auxiliary power units.",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -40,10 +36,6 @@
       "visible": true,
       "name": "T-3 minutes, 55 seconds",
       "description": "Start orbiter aerosurface profile test, followed by main engine gimbal profile test",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -55,10 +47,6 @@
       "visible": true,
       "name": "T-3 minutes, 20 seconds",
       "description": "CBC liquid hydrogen and liquid oxygen tank secured. Propellant fill and drain valves closed.",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -70,10 +58,6 @@
       "visible": true,
       "name": "T-3 minutes",
       "description": "Vehicle ordinance system armed. Booster liquid oxygen and liquid hydrogen propellant tanks verified and at flight pressure and flight level.",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -85,10 +69,6 @@
       "visible": true,
       "name": "T-2 minutes, 0 seconds",
       "description": "Hydraulic system pressure verified. Booster, DCSS and flight termination system battery voltages are confirmed.",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -100,10 +80,6 @@
       "visible": true,
       "name": "T-1 minute, 20 seconds",
       "description": "Securing second stage liquid hydrogen tank.",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -115,10 +91,6 @@
       "visible": true,
       "name": "T-50 seconds",
       "description": "Orbiter transfers from ground to internal power",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -130,10 +102,6 @@
       "visible": true,
       "name": "T-31 seconds",
       "description": "Ground launch sequencer is go for auto sequence start",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -145,10 +113,6 @@
       "visible": true,
       "name": "T-25 seconds",
       "description": "Launch vehicle and spacecraft status check complete.",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -160,10 +124,6 @@
       "visible": false,
       "name": "T-9 minutes and counting",
       "description": "Start automatic ground launch sequencer.",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -175,10 +135,6 @@
       "visible": false,
       "name": "T-7 minutes, 30 seconds",
       "description": "Retract orbiter access arm.",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -190,10 +146,6 @@
       "visible": false,
       "name": "T-5 minutes, 0 seconds",
       "description": "Arm solid rocket booster range safety safe and arm devices",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -205,10 +157,6 @@
       "visible": false,
       "name": "T-4 minutes and counting",
       "description": "Entering the terminal count and second stage liquid oxygen tank is secure.",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -220,10 +168,6 @@
       "visible": false,
       "name": "T-3 minutes, 32 seconds",
       "description": "Transfer from ground facility power to internal battery power complete.",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -235,10 +179,6 @@
       "visible": false,
       "name": "T-2 minutes, 55 seconds",
       "description": "Retract gaseous oxygen vent arm, or \"beanie cap\"",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -250,10 +190,6 @@
       "visible": false,
       "name": "T-2 minutes, 0 seconds",
       "description": "Crew members close and lock their visors",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -265,10 +201,6 @@
       "visible": false,
       "name": "T-60 seconds",
       "description": "Western range readiness verified.",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -280,10 +212,6 @@
       "visible": false,
       "name": "T-50 seconds",
       "description": "DCSS liquid hydrogen tank is secured a flight level.",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -295,10 +223,6 @@
       "visible": false,
       "name": "T-16 seconds",
       "description": "Activate launch pad sound suppression system",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -307,13 +231,13 @@
       "timestamp": 1455104325,
       "milestone": true,
       "milestone_source": "launch_replay_video",
+      "stream": {
+        "type": "3d",
+        "camera": "Body"
+      },
       "visible": false,
       "name": "T-15 seconds",
       "description": "Radial Outward Firing Igniters (ROFIs, or “sparklers”) are guided to burn off excess hydrogen at the base of the vehicle.",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -322,13 +246,13 @@
       "timestamp": 1455104330,
       "milestone": true,
       "milestone_source": "nasa_countdown_101",
+      "stream": {
+        "type": "3d",
+        "camera": "Body"
+      },
       "visible": false,
       "name": "T-10 seconds",
       "description": "Activate main engine hydrogen burnoff system",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -340,10 +264,6 @@
       "visible": false,
       "name": "T-6.6 seconds",
       "description": "Main engine start",
-      "stream": {
-        "type": "3d",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -352,13 +272,13 @@
       "timestamp": 1455104340,
       "milestone": true,
       "milestone_source": "nasa_countdown_101",
+      "stream": {
+        "type": "3d",
+        "camera": "Body"
+      },
       "visible": false,
       "name": "T-0",
       "description": "Solid rocket booster ignition and liftoff",
-      "stream": {
-        "type": "video",
-        "path": "/somepath"
-      },
       "conditions": {
         "temp": 71
       }
@@ -368,7 +288,7 @@
       "milestone": false,
       "stream": {
         "type": "3d",
-        "path": "/somepath"
+        "camera": "RocketHead"
       },
       "view_count": 2452334
     }

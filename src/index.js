@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import ReactUpdate from 'react-addons-update';
 import Moment from 'moment';
 import _ from 'lodash';
+import $ from 'jquery';
 
 import Intro from './components/intro';
 import Stream from './components/stream';
@@ -44,11 +45,19 @@ class App extends Component {
 					*/ }
 					<div className="screen" id="app">
 						<Stream />
-						<Interface state={this.state} />
+						<Interface
+							state={this.state}
+							onEventSelect={ this.onEventSelect }
+						/>
 					</div>
 				</div>
 			</div>
 		);
+	}
+
+	onEventSelect(event) {
+		console.log('detect in index', event);
+		$(window).trigger('eventSelect', event);
 	}
 
 	loadData() {

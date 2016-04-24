@@ -14,7 +14,9 @@ class Stream extends Component {
 			var frame = e.target;
 			window.addEventListener("message", function(event) {
 				if(event['data'] == 'loaded') {
-					frame.contentWindow.postMessage({testing: true}, '*');
+					$(window).on('eventSelect', function(event, eventName) {
+						frame.contentWindow.postMessage({eventName: eventName}, '*');
+					});		
 				}
 			}, false);
 		});

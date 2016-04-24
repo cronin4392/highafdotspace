@@ -18,10 +18,16 @@ class Scrubber extends Component {
 		const events = this.props.events;
 		if(events.length) {
 			const eventItems = events.map((event, index) => {
+				var stream = event['stream'] || {};
+				var camera = stream['camera'] || null;
+
 				return (
 					<div
 						className="scrubber--event"
+						data-event-name={event['name']}
+						data-event-camera={camera}
 						key={index}
+						onClick={() => this.props.onEventSelect(camera)}
 					>
 						<span className="scrubber--event--time">
 							{Moment(event.timestamp * 1000).format('HH:mm:ss')}

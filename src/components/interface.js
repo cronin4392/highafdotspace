@@ -3,7 +3,8 @@ import Moment from 'moment';
 
 import Scrubber from './scrubber';
 
-const Interface = ({state}) => {
+const Interface = (props) => {
+	var state = props['state'];
 	const time = Moment(state['time']['count']);
 
 	return (
@@ -13,7 +14,10 @@ const Interface = ({state}) => {
 				<span className="unit">{ time.format("mm") } Min</span>
 				<span className="unit">{ time.format("ss") } Sec</span>
 			</div>
-			<Scrubber events={ state['events'] } />
+			<Scrubber
+				events={ state['events'] }
+				onEventSelect={props.onEventSelect}
+			/>
 		</div>
 	);
 }

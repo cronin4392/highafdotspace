@@ -1,189 +1,298 @@
 var data = {
-	"mission": {
-		"name": "Delta IV - NROL-45",
-		"mission": "The mission will be launched for the National Reconnaissance Office in support of national defense.",
-		"agency_name": "United Launch Alliance",
-		"agency_abbreviation": "ULA"
-		},
-	"rocket": {
-		"name": "Delta IV",
-		"long_name": "Delta IV Medium+(5,2)",
-		"payload": ""
-		},
-	"launch_time": 1455104340,
-	"launch_site": "Space Launch Complex (SLC)-6 at Vandenberg Air Force Base, California",
-	"notes": "NROL-45 will be the 31st Delta IV mission since the vehicle’s inaugural launch in 2002, and the 9th NRO mission to launch on Delta IV.",
-	"feed": [
-		{
-			"timestamp": 1455104340,
-			"milestone": true,
-			"name": "T-0",
-			"description": "Solid rocket booster ignition and liftoff",
-			"stream": {
-				"type": "video",
-				"path": "/somepath"
-			},
-			"conditions": {
-				"temp": 71
-			}
-		},
-		{
-			"timestamp": 1455104333,
-			"milestone": true,
-			"name": "T-6.6 seconds",
-			"description": "Main engine start",
-			"stream": {
-				"type": "3d",
-				"path": "/somepath"
-			},
-			"conditions": {
-				"temp": 71
-			}
-		},
-		{
-			"timestamp": 1455104330,
-			"milestone": true,
-			"name": "T-10 seconds",
-			"description": "Activate main engine hydrogen burnoff system",
-			"stream": {
-				"type": "3d",
-				"path": "/somepath"
-			},
-			"conditions": {
-				"temp": 71
-			}
-		},
-		{
-			"timestamp": 1455104324,
-			"milestone": true,
-			"name": "T-16 seconds",
-			"description": "Activate launch pad sound suppression system",
-			"stream": {
-				"type": "3d",
-				"path": "/somepath"
-			},
-			"conditions": {
-				"temp": 71
-			}
-		},
-		{
-			"timestamp": 1455104309,
-			"milestone": true,
-			"name": "T-31 seconds",
-			"description": "Ground launch sequencer is go for auto sequence start",
-			"stream": {
-				"type": "3d",
-				"path": "/somepath"
-			},
-			"conditions": {
-				"temp": 71
-			}
-		},
-		{
-			"timestamp": 1455104290,
-			"milestone": true,
-			"name": "T-50 seconds",
-			"description": "Orbiter transfers from ground to internal power",
-			"stream": {
-				"type": "3d",
-				"path": "/somepath"
-			},
-			"conditions": {
-				"temp": 71
-			}
-		},		
-		{
-			"timestamp": 1455104220,
-			"milestone": true,
-			"name": "T-2 minutes, 0 seconds",
-			"description": "Crew members close and lock their visors",
-			"stream": {
-				"type": "3d",
-				"path": "/somepath"
-			},
-			"conditions": {
-				"temp": 71
-			}
-		},
-		{
-			"timestamp": 1455104165,
-			"milestone": true,
-			"name": "T-2 minutes, 55 seconds",
-			"description": "Retract gaseous oxygen vent arm, or \"beanie cap\"",
-			"stream": {
-				"type": "3d",
-				"path": "/somepath"
-			},
-			"conditions": {
-				"temp": 71
-			}
-		},
-		{
-			"timestamp": 1455104105,
-			"milestone": true,
-			"name": "T-3 minutes, 55 seconds",
-			"description": "Start orbiter aerosurface profile test, followed by main engine gimbal profile test",
-			"stream": {
-				"type": "3d",
-				"path": "/somepath"
-			},
-			"conditions": {
-				"temp": 71
-			}
-		},
-		{
-			"timestamp": 1455104040,
-			"milestone": true,
-			"name": "T-5 minutes, 0 seconds",
-			"description": "Arm solid rocket booster range safety safe and arm devices",
-			"stream": {
-				"type": "3d",
-				"path": "/somepath"
-			},
-			"conditions": {
-				"temp": 71
-			}
-		},
-		{
-			"timestamp": 1455104040,
-			"milestone": true,
-			"name": "T-5 minutes, 0 seconds",
-			"description": "Start auxiliary power units",
-			"stream": {
-				"type": "3d",
-				"path": "/somepath"
-			},
-			"conditions": {
-				"temp": 71
-			}	
-		},
-		{
-			"timestamp": 1455103890,
-			"milestone": true,
-			"name": "T-7 minutes, 30 seconds",
-			"description": "Retract orbiter access arm",
-			"stream": {
-				"type": "3d",
-				"path": "/somepath"
-			},
-			"conditions": {
-				"temp": 71
-			}
-		},
-		{
-			"timestamp": 1455103800,
-			"milestone": true,
-			"name": "T-9 minutes and counting",
-			"description": "Start automatic ground launch sequencer",
-			"stream": {
-				"type": "3d",
-				"path": "/somepath"
-			},
-			"conditions": {
-				"temp": 71
-			}
-		}
-	]
+  "mission": {
+    "name": "Delta IV - NROL-45",
+    "mission": "The mission will be launched for the National Reconnaissance Office in support of national defense.",
+    "agency_name": "United Launch Alliance",
+    "agency_abbreviation": "ULA"
+  },
+  "rocket": {
+    "name": "Delta IV",
+    "long_name": "Delta IV Medium+(5,2)",
+    "payload": ""
+  },
+  "launch_time": 1455104340,
+  "launch_site": "Space Launch Complex (SLC)-6 at Vandenberg Air Force Base, California",
+  "notes": "NROL-45 will be the 31st Delta IV mission since the vehicle’s inaugural launch in 2002, and the 9th NRO mission to launch on Delta IV.",
+  "feed_count": 24,
+  "visible_milestone_count": 9,
+  "invisible_milestone_count": 14,
+  "not_milestone_count": 1,
+  "feed": [
+    {
+      "timestamp": 1455104040,
+      "milestone": true,
+      "milestone_source": "nasa_countdown_101",
+      "visible": true,
+      "name": "T-5 minutes, 0 seconds",
+      "description": "Start auxiliary power units.",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104105,
+      "milestone": true,
+      "milestone_source": "nasa_countdown_101",
+      "visible": true,
+      "name": "T-3 minutes, 55 seconds",
+      "description": "Start orbiter aerosurface profile test, followed by main engine gimbal profile test",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104140,
+      "milestone": true,
+      "milestone_source": "launch_replay_video",
+      "visible": true,
+      "name": "T-3 minutes, 20 seconds",
+      "description": "CBC liquid hydrogen and liquid oxygen tank secured. Propellant fill and drain valves closed.",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104160,
+      "milestone": true,
+      "milestone_source": "launch_replay_video",
+      "visible": true,
+      "name": "T-3 minutes",
+      "description": "Vehicle ordinance system armed. Booster liquid oxygen and liquid hydrogen propellant tanks verified and at flight pressure and flight level.",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104220,
+      "milestone": true,
+      "milestone_source": "launch_replay_video",
+      "visible": true,
+      "name": "T-2 minutes, 0 seconds",
+      "description": "Hydraulic system pressure verified. Booster, DCSS and flight termination system battery voltages are confirmed.",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104260,
+      "milestone": true,
+      "milestone_source": "launch_replay_video",
+      "visible": true,
+      "name": "T-1 minute, 20 seconds",
+      "description": "Securing second stage liquid hydrogen tank.",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104290,
+      "milestone": true,
+      "milestone_source": "nasa_countdown_101",
+      "visible": true,
+      "name": "T-50 seconds",
+      "description": "Orbiter transfers from ground to internal power",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104309,
+      "milestone": true,
+      "milestone_source": "nasa_countdown_101",
+      "visible": true,
+      "name": "T-31 seconds",
+      "description": "Ground launch sequencer is go for auto sequence start",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104315,
+      "milestone": true,
+      "milestone_source": "launch_replay_video",
+      "visible": true,
+      "name": "T-25 seconds",
+      "description": "Launch vehicle and spacecraft status check complete.",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455103800,
+      "milestone": true,
+      "milestone_source": "nasa_countdown_101",
+      "visible": false,
+      "name": "T-9 minutes and counting",
+      "description": "Start automatic ground launch sequencer.",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455103890,
+      "milestone": true,
+      "milestone_source": "nasa_countdown_101",
+      "visible": false,
+      "name": "T-7 minutes, 30 seconds",
+      "description": "Retract orbiter access arm.",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104040,
+      "milestone": true,
+      "milestone_source": "nasa_countdown_101",
+      "visible": false,
+      "name": "T-5 minutes, 0 seconds",
+      "description": "Arm solid rocket booster range safety safe and arm devices",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104100,
+      "milestone": true,
+      "milestone_source": "launch_replay_video",
+      "visible": false,
+      "name": "T-4 minutes and counting",
+      "description": "Entering the terminal count and second stage liquid oxygen tank is secure.",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104128,
+      "milestone": true,
+      "milestone_source": "launch_replay_video",
+      "visible": false,
+      "name": "T-3 minutes, 32 seconds",
+      "description": "Transfer from ground facility power to internal battery power complete.",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104165,
+      "milestone": true,
+      "milestone_source": "nasa_countdown_101",
+      "visible": false,
+      "name": "T-2 minutes, 55 seconds",
+      "description": "Retract gaseous oxygen vent arm, or \"beanie cap\"",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104220,
+      "milestone": true,
+      "milestone_source": "nasa_countdown_101",
+      "visible": false,
+      "name": "T-2 minutes, 0 seconds",
+      "description": "Crew members close and lock their visors",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104280,
+      "milestone": true,
+      "milestone_source": "launch_replay_video",
+      "visible": false,
+      "name": "T-60 seconds",
+      "description": "Western range readiness verified.",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104290,
+      "milestone": true,
+      "milestone_source": "launch_replay_video",
+      "visible": false,
+      "name": "T-50 seconds",
+      "description": "DCSS liquid hydrogen tank is secured a flight level.",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104324,
+      "milestone": true,
+      "milestone_source": "nasa_countdown_101",
+      "visible": false,
+      "name": "T-16 seconds",
+      "description": "Activate launch pad sound suppression system",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104325,
+      "milestone": true,
+      "milestone_source": "launch_replay_video",
+      "stream": {
+        "type": "3d",
+        "camera": "Body"
+      },
+      "visible": false,
+      "name": "T-15 seconds",
+      "description": "Radial Outward Firing Igniters (ROFIs, or “sparklers”) are guided to burn off excess hydrogen at the base of the vehicle.",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104330,
+      "milestone": true,
+      "milestone_source": "nasa_countdown_101",
+      "stream": {
+        "type": "3d",
+        "camera": "Body"
+      },
+      "visible": false,
+      "name": "T-10 seconds",
+      "description": "Activate main engine hydrogen burnoff system",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104333,
+      "milestone": true,
+      "milestone_source": "nasa_countdown_101",
+      "visible": false,
+      "name": "T-6.6 seconds",
+      "description": "Main engine start",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104340,
+      "milestone": true,
+      "milestone_source": "nasa_countdown_101",
+      "stream": {
+        "type": "3d",
+        "camera": "Body"
+      },
+      "visible": false,
+      "name": "T-0",
+      "description": "Solid rocket booster ignition and liftoff",
+      "conditions": {
+        "temp": 71
+      }
+    },
+    {
+      "timestamp": 1455104336,
+      "milestone": false,
+      "stream": {
+        "type": "3d",
+        "camera": "RocketHead"
+      },
+      "view_count": 2452334
+    }
+  ]
 }
 
 export default data;
