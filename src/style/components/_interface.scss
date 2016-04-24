@@ -6,3 +6,17 @@
 
 	padding: 1em;
 }
+
+	.view-toggle {
+		position: absolute;
+		right: 1em;
+		top: 50%;
+		transform: translateY(-50%);
+
+		background-color: $red;
+		padding: 1em;
+
+		pointer-events: auto;
+
+		display: none;
+	}

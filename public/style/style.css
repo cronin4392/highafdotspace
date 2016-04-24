@@ -232,6 +232,18 @@ button {
   pointer-events: none;
   padding: 1em; }
 
+/* line 10, /Users/stephencronin/Sites/highafdotspace/src/style/components/_interface.scss */
+.view-toggle {
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #FC5C5C;
+  padding: 1em;
+  pointer-events: auto;
+  display: none; }
+
 /* line 1, /Users/stephencronin/Sites/highafdotspace/src/style/components/_scrubber.scss */
 .scrubber {
   position: absolute;

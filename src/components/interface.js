@@ -4,11 +4,12 @@ import Moment from 'moment';
 import Scrubber from './scrubber';
 import Countdown from './countdown';
 
-const Interface = (props) => {
-	var state = props['state'];
+const Interface = ({state, onEventSelect}) => {
 	const countDown = Moment.duration(state['time']['count']);
 	const currentTime = Moment(state['time']['current']);
 	const launchTime = Moment(state['time']['launch']);
+
+	let controlsEnabled = false;
 
 	return (
 		<div className="interface">
@@ -17,9 +18,18 @@ const Interface = (props) => {
 				abrev={true}
 				className="interface--countdown"
 			/>
+			<button
+				className="view-toggle"
+				onClick={() => {
+					onEventSelect('toggle-controls');
+					controlsEnabled = !controlsEnabled;
+				}}
+			>
+				Toggle!
+			</button>
 			<Scrubber
 				events={ state['activeEvents'] }
-				onEventSelect={props.onEventSelect}
+				onEventSelect={onEventSelect}
 			/>
 		</div>
 	);

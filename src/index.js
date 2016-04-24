@@ -26,7 +26,11 @@ class App extends Component {
 			mission: {},
 			events: {},
 			activeEvents: {},
+			panningOn: false
 		}
+
+		this.streamLoaded = false;
+		this.queuedEvent;
 	}
 
 	componentDidMount() {
@@ -50,6 +54,9 @@ class App extends Component {
 	}
 
 	render() {
+		const onStreamLoad = (el) => { this.onStreamLoad(el) };
+		const onEventSelect = (event) => { this.onEventSelect(event) };
+
 		return (
 			<div>
 				<div className="scroller" ref="scroller">
@@ -62,10 +69,12 @@ class App extends Component {
 					</div>
 					<div className="screen screen-fixed" id="app">
 						<div className="screen--wrapper">
-							<Stream />
+							<Stream
+								onStreamLoad={ onStreamLoad }
+							/>
 							<Interface
 								state={this.state}
-								onEventSelect={ this.onEventSelect }
+								onEventSelect={ onEventSelect }
 							/>
 						</div>
 					</div>
@@ -74,9 +83,25 @@ class App extends Component {
 		);
 	}
 
+	onStreamLoad(el) {
+		this.streamLoaded = true;
+		$(window).on('eventSelect', function(event, eventName) {
+			el.contentWindow.postMessage({eventName: eventName}, '*');
+		});
+		if(this.queuedEvent) {
+			this.onEventSelect(this.queuedEvent);
+			this.queuedEvent = null;
+		}
+	}
+
 	onEventSelect(event) {
-		console.log('Event dispatched', event);
-		$(window).trigger('eventSelect', event);
+		console.log('Event dispatched', event, this.streamLoaded);
+		if(this.streamLoaded) {
+			$(window).trigger('eventSelect', event);
+		}
+		else {
+			this.queuedEvent = event;
+		}
 	}
 
 	loadData() {
