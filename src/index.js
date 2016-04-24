@@ -18,7 +18,7 @@ class App extends Component {
 
 		this.state = {
 			time: {
-				current: Moment(),
+				current: Moment(1455104040000),
 				count: 0,
 				launch: 0
 			},
@@ -67,12 +67,15 @@ class App extends Component {
 	}
 
 	onTimeChange() {
-		// console.log( this.state['time']['launch'].format(), this.state['time']['current'].format() )
+		// fake getting "current time". just add 1 to state['time']['current'] since not actually now
+		var lastCurrentTime = this.state['time']['current'].valueOf();
+		var newCurrentTime = Moment(lastCurrentTime + 1000);
+		var launchTime = this.state['time']['launch'];
 
 		this.setState(
 			ReactUpdate(this.state, {
 				time: {
-					current: {$set: Moment()},
+					current: {$set: newCurrentTime},
 					count: {$set: Moment(this.state['time']['launch'].diff(this.state['time']['current']))}
 				}
 			})
