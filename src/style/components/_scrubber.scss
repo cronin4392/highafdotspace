@@ -1,0 +1,38 @@
+.scrubber {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	pointer-events: auto;
+
+	padding: 2em 1em 1em 1em;
+	overflow: auto;
+	white-space: nowrap;
+
+	background: gray;
+
+	&:after {
+		content: '';
+		display: inline-block;
+		margin-left: 50vw;
+	}
+}
+
+	.scrubber--event {
+		display: inline-block;
+		margin-left: calc(50vw - 2em);
+		position: relative;
+
+		height: 0.5em;
+		width: 0.5em;
+
+		background: #000000;
+	}
+
+		.scrubber--event--time {
+			position: absolute;
+			left: 50%;
+			bottom: 1em;
+			transform: translateX(-50%);
+		}

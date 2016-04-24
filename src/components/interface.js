@@ -1,6 +1,8 @@
 import React from 'react';
 import Moment from 'moment';
 
+import Scrubber from './scrubber';
+
 const Interface = ({state}) => {
 	const time = Moment(state['time']['count']);
 
@@ -11,6 +13,7 @@ const Interface = ({state}) => {
 				<span className="unit">{ time.format("mm") } Min</span>
 				<span className="unit">{ time.format("ss") } Sec</span>
 			</div>
+			<Scrubber events={ state['events'] } />
 		</div>
 	);
 }
