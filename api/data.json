@@ -29,7 +29,6 @@
         "type": "3d",
         "camera": "M-1"
       },
-      "description": "Start auxiliary power units.",
       "conditions": {
         "temp": 71
       }
@@ -45,8 +44,6 @@
         "type": "3d",
         "camera": "M-2"
       },
-      "name": "T-3 minutes, 55 seconds",
-      "description": "Start orbiter aerosurface profile test, followed by main engine gimbal profile test",
       "conditions": {
         "temp": 71
       }
@@ -62,8 +59,6 @@
         "type": "3d",
         "camera": "M-3"
       },
-      "name": "T-3 minutes, 20 seconds",
-      "description": "CBC liquid hydrogen and liquid oxygen tank secured. Propellant fill and drain valves closed.",
       "conditions": {
         "temp": 71
       }
@@ -79,8 +74,6 @@
         "type": "3d",
         "camera": "M-4"
       },
-      "name": "T-3 minutes",
-      "description": "Vehicle ordinance system armed. Booster liquid oxygen and liquid hydrogen propellant tanks verified and at flight pressure and flight level.",
       "conditions": {
         "temp": 71
       }
@@ -96,8 +89,6 @@
         "type": "3d",
         "camera": "M-5"
       },
-      "name": "T-2 minutes, 0 seconds",
-      "description": "Hydraulic system pressure verified. Booster, DCSS and flight termination system battery voltages are confirmed.",
       "conditions": {
         "temp": 71
       }
@@ -107,12 +98,12 @@
       "milestone": true,
       "milestone_source": "launch_replay_video",
       "visible": true,
+      "name": "T-1 minute, 20 seconds",
+      "description": "Securing second stage liquid hydrogen tank.",
       "stream": {
         "type": "3d",
         "camera": "M-6"
       },
-      "name": "T-1 minute, 20 seconds",
-      "description": "Securing second stage liquid hydrogen tank.",
       "conditions": {
         "temp": 71
       }
@@ -128,8 +119,6 @@
         "type": "3d",
         "camera": "M-7"
       },
-      "name": "T-50 seconds",
-      "description": "Orbiter transfers from ground to internal power",
       "conditions": {
         "temp": 71
       }
@@ -139,12 +128,12 @@
       "milestone": true,
       "milestone_source": "nasa_countdown_101",
       "visible": true,
+      "name": "T-31 seconds",
+      "description": "Ground launch sequencer is go for auto sequence start",
       "stream": {
         "type": "3d",
         "camera": "M-8"
       },
-      "name": "T-31 seconds",
-      "description": "Ground launch sequencer is go for auto sequence start",
       "conditions": {
         "temp": 71
       }
@@ -154,12 +143,12 @@
       "milestone": true,
       "milestone_source": "launch_replay_video",
       "visible": true,
+      "name": "T-25 seconds",
+      "description": "Launch vehicle and spacecraft status check complete.",
       "stream": {
         "type": "3d",
         "camera": "M-9"
       },
-      "name": "T-25 seconds",
-      "description": "Launch vehicle and spacecraft status check complete.",
       "conditions": {
         "temp": 71
       }
@@ -294,8 +283,6 @@
         "camera": "Body"
       },
       "visible": false,
-      "name": "T-15 seconds",
-      "description": "Radial Outward Firing Igniters (ROFIs, or “sparklers”) are guided to burn off excess hydrogen at the base of the vehicle.",
       "conditions": {
         "temp": 71
       }
@@ -304,13 +291,13 @@
       "timestamp": 1455104330,
       "milestone": true,
       "milestone_source": "nasa_countdown_101",
+      "name": "T-10 seconds",
+      "description": "Activate main engine hydrogen burnoff system",
       "stream": {
         "type": "3d",
         "camera": "Body"
       },
       "visible": false,
-      "name": "T-10 seconds",
-      "description": "Activate main engine hydrogen burnoff system",
       "conditions": {
         "temp": 71
       }
@@ -330,13 +317,13 @@
       "timestamp": 1455104340,
       "milestone": true,
       "milestone_source": "nasa_countdown_101",
+      "name": "T-0",
+      "description": "Solid rocket booster ignition and liftoff",
       "stream": {
         "type": "3d",
         "camera": "Body"
       },
       "visible": false,
-      "name": "T-0",
-      "description": "Solid rocket booster ignition and liftoff",
       "conditions": {
         "temp": 71
       }
