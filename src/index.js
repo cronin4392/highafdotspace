@@ -18,8 +18,8 @@ class App extends Component {
 		this.state = {
 			time: {
 				// current: Moment(1455104040000), // 1 el
-				current: Moment(1455104270000), // 2 el
-				// current: Moment(1455104270000),
+				// current: Moment(1455104270000), // 2 el
+				current: Moment(1455104046000),
 				count: 0,
 				launch: 0
 			},
@@ -30,7 +30,7 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		var interval = 500;
+		var interval = 1000;
 		this.loadData();
 		setInterval(function() {
 			this.onTimeChange();

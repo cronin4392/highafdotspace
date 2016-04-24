@@ -14,6 +14,7 @@ const Interface = (props) => {
 		<div className="interface">
 			<Countdown
 				time={ state['time'] }
+				abrev={true}
 				className="interface--countdown"
 			/>
 			<Scrubber
