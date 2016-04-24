@@ -19,7 +19,7 @@ class App extends Component {
 			time: {
 				// current: Moment(1455104040000), // 1 el
 				// current: Moment(1455104270000), // 2 el
-				current: Moment(1455104046000),
+				current: Moment(1455104286000),
 				count: 0,
 				launch: 0
 			},
@@ -86,6 +86,7 @@ class App extends Component {
 	onStreamLoad(el) {
 		this.streamLoaded = true;
 		$(window).on('eventSelect', function(event, eventName) {
+			console.log('Event dispatched', event, this.streamLoaded);
 			el.contentWindow.postMessage({eventName: eventName}, '*');
 		});
 		if(this.queuedEvent) {
@@ -95,7 +96,6 @@ class App extends Component {
 	}
 
 	onEventSelect(event) {
-		console.log('Event dispatched', event, this.streamLoaded);
 		if(this.streamLoaded) {
 			$(window).trigger('eventSelect', event);
 		}
