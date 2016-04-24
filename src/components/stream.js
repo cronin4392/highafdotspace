@@ -29,7 +29,7 @@ class Stream extends Component {
 				<IFrame url="http://highafhdotspace3dalt.herokuapp.com/" />
 				<IFrame url="http://localhost:3000" />
 				*/}
-				<IFrame url="http://highafhdotspace3dalt.herokuapp.com/" />
+				<IFrame url="https://highafhdotspace3dalt.herokuapp.com/" />
 			</div>
 		);
 	}
