@@ -18,7 +18,7 @@ class App extends Component {
 		this.state = {
 			time: {
 				// current: Moment(1455104315000), // T-1
-				current: Moment(1455104025000), // T-5
+				current: Moment(1455104025000), // T-5:15
 				// current: Moment(1455103860000), // T-8
 				count: 0,
 				launch: 0
@@ -35,7 +35,7 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		var interval = 750;
+		var interval = 500;
 		this.loadData();
 		setInterval(function() {
 			this.onTimeChange();
@@ -69,9 +69,6 @@ class App extends Component {
 				this.introPassed = true;
 				document.body.classList.add('main-active');
 				this.triggerQueuedEvent();
-			}
-			else if(this.introPassed) {
-				this.introPassed = false;
 			}
 		});
 	}
