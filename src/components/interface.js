@@ -38,6 +38,7 @@ class Interface extends Component {
 				<Countdown
 					time={ state['time'] }
 					abrev={true}
+					showLaunch={true}
 					className="interface--countdown"
 				/>
 				<button

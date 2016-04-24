@@ -231,6 +231,36 @@ body.main-active .screen-passover {
 body.main-active .stream {
   pointer-events: auto; }
 
+/* line 2, /Users/stephencronin/Sites/highafdotspace/src/style/components/_countdown.scss */
+.countdown .block-launching {
+  display: none;
+  -webkit-animation: stobe 1s infinite;
+          animation: stobe 1s infinite; }
+
+/* line 9, /Users/stephencronin/Sites/highafdotspace/src/style/components/_countdown.scss */
+.countdown.launching .block-launching {
+  display: block; }
+
+/* line 17, /Users/stephencronin/Sites/highafdotspace/src/style/components/_countdown.scss */
+.interface--countdown.launching .block-countdown {
+  display: none; }
+
+@-webkit-keyframes stobe {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0.7; }
+  100% {
+    opacity: 1; } }
+
+@keyframes stobe {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0.7; }
+  100% {
+    opacity: 1; } }
+
 /* line 1, /Users/stephencronin/Sites/highafdotspace/src/style/components/_interface.scss */
 .interface {
   position: absolute;

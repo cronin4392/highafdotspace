@@ -20,6 +20,8 @@ const Countdown = ({time, abrev = false, className = ''}) => {
 		seconds = '0' + seconds;
 	}
 
+	const counting = (parseInt(hours,10) + parseInt(minutes, 10) + parseInt(seconds, 10) > 0);
+
 	const strings = [
 		[
 			'Hours',
@@ -36,16 +38,16 @@ const Countdown = ({time, abrev = false, className = ''}) => {
 	const stringsKey = abrev ? 1 : 0;
 
 	return (
-		<div className={className + " countdown"}>
-			<span className={ "block " + (hours <= 0 ? 'faded' : '')}>
+		<div className={className + " countdown " + (!counting ? 'launching' : '')}>
+			<span className={ "block block-countdown " + (hours <= 0 ? 'faded' : '')}>
 				<span className="number">{ hours }</span>
 				<span> {strings[stringsKey][0]}</span>
 			</span>
-			<span className={ "block " + ((minutes <= 0 && hours <= 0) ? 'faded' : '')}>
+			<span className={ "block block-countdown " + ((minutes <= 0 && hours <= 0) ? 'faded' : '')}>
 				<span className="number">{ minutes }</span>
 				<span> {strings[stringsKey][1]}</span>
 			</span>
-			<span className={ "block " + ((seconds <= 0 && minutes <= 0 && hours <= 0) ? 'faded' : '')}>
+			<span className={ "block block-countdown " + ((seconds <= 0 && minutes <= 0 && hours <= 0) ? 'faded' : '')}>
 				<span className="number">{ seconds }</span>
 				<span> {strings[stringsKey][2]}</span>
 			</span>
@@ -53,6 +55,9 @@ const Countdown = ({time, abrev = false, className = ''}) => {
 			<span className="block">{ currentTime.format('HH:mm:ss') }</span>
 			<span className="unit">{ launchTime.format() }</span>
 			*/}
+			<span className="block block-launching">
+				Launching
+			</span>
 		</div>
 	);
 }

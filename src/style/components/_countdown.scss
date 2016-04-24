@@ -1,0 +1,33 @@
+.countdown {
+	.block-launching {
+		display: none;
+
+		animation: stobe 1s infinite;
+	}
+
+	&.launching {
+		.block-launching {
+			display: block;
+		}
+	}
+}
+
+.interface--countdown {
+	&.launching {
+		.block-countdown {
+			display: none;
+		}
+	}
+}
+
+@keyframes stobe {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.7;
+	}
+	100% {
+		opacity: 1;
+	}
+}
