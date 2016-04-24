@@ -36,17 +36,17 @@ class App extends Component {
 			this.onTimeChange();
 		}.bind(this), interval);
 
-		window.appDraggable = Draggable.create(
-			this.refs.scroller,
-			{
-				type: "scrollTop",
-				edgeResistance: 1,
-				throwProps: true,
-				snap: function(endValue) {
-					return Math.round(-1 * endValue / window.innerHeight) * window.innerHeight;
-				}
-			}
-		)
+		// window.appDraggable = Draggable.create(
+		// 	this.refs.scroller,
+		// 	{
+		// 		type: "scrollTop",
+		// 		edgeResistance: 1,
+		// 		throwProps: true,
+		// 		snap: function(endValue) {
+		// 			return Math.round(-1 * endValue / window.innerHeight) * window.innerHeight;
+		// 		}
+		// 	}
+		// )
 	}
 
 	render() {
