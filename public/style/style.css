@@ -104,12 +104,17 @@ button {
   margin: 0;
   padding: 0;
   border: 0;
+  outline: 0;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   color: inherit;
   font: inherit;
-  background: transparent; }
+  background: transparent;
+  cursor: pointer; }
+  /* line 34, /Users/stephencronin/Sites/highafdotspace/src/style/style.scss */
+  button:active {
+    outline: 0; }
 
 /* line 1, /Users/stephencronin/Sites/highafdotspace/src/style/components/_screen.scss */
 .scroller {
@@ -201,21 +206,27 @@ button {
   .scrubber:after {
     content: '';
     display: inline-block;
-    margin-left: 50vw; }
+    margin-left: calc(50vw - 2em); }
 
 /* line 22, /Users/stephencronin/Sites/highafdotspace/src/style/components/_scrubber.scss */
 .scrubber--event {
   display: inline-block;
+  vertical-align: middle;
   margin-left: calc(50vw - 2em);
   position: relative;
-  height: 0.5em;
-  width: 0.5em;
-  background: #000000; }
+  padding: 1em; }
 
-/* line 33, /Users/stephencronin/Sites/highafdotspace/src/style/components/_scrubber.scss */
+/* line 30, /Users/stephencronin/Sites/highafdotspace/src/style/components/_scrubber.scss */
 .scrubber--event--time {
   position: absolute;
   left: 50%;
-  bottom: 1em;
+  top: -1em;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%); }
+
+/* line 37, /Users/stephencronin/Sites/highafdotspace/src/style/components/_scrubber.scss */
+.scrubber--event--dot {
+  display: block;
+  height: 0.5em;
+  width: 0.5em;
+  background: #000000; }

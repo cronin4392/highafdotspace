@@ -29,6 +29,11 @@ body {
 
 button {
 	@include reset();
+	cursor: pointer;
+
+	&:active {
+		outline: 0;
+	}
 }
 
 @import 'components/screen';

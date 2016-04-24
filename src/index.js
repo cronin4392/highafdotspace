@@ -70,6 +70,7 @@ class App extends Component {
 		);
 
 		var feed = _.sortBy(data['feed'], 'timestamp');
+		feed = _.filter(feed, {'visible': true});
 		this.setState({
 			'events': feed
 		});

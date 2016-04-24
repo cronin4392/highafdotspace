@@ -22,17 +22,19 @@ class Scrubber extends Component {
 				var camera = stream['camera'] || null;
 
 				return (
-					<div
+					<button
 						className="scrubber--event"
 						data-event-name={event['name']}
 						data-event-camera={camera}
 						key={index}
 						onClick={() => this.props.onEventSelect(camera)}
 					>
+						<span className="scrubber--event--dot">
+						</span>
 						<span className="scrubber--event--time">
 							{Moment(event.timestamp * 1000).format('HH:mm:ss')}
 						</span>
-					</div>
+					</button>
 				)
 			});
 
